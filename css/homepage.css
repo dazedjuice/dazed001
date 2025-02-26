@@ -35,14 +35,17 @@ header {
 
 .button-container a {
   display: inline-block;
-  width: 120px; /* Set width to 50px */
-  height: 120px; /* Set height to 50px */
+  width: 120px; /* Set width to 120px */
+  height: 120px; /* Set height to 120px */
 }
 
 .button-container a img {
-  width: 80%; /* Ensure the image covers the link area */
+  width: 100%; /* Ensure the image covers the link area */
   height: 100%; /* Ensure the image covers the link area */
   object-fit: cover; /* Ensure the image covers the area */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the area */
+  padding: 10px; /* Add padding to reduce the width */
 }
 
 main{
