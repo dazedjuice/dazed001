@@ -7,6 +7,7 @@ body {
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
+    overflow: hidden; 
   }
   
   /* Header styling */
@@ -76,10 +77,39 @@ body {
     padding: 20px;
   }
 
+  .message-board-container {
+    position: relative; /* Position relative to contain note images */
+    width: 50%; /* Adjusted width to fit the page */
+    max-width: 600px; /* Maximum width */
+  }
+
   .message-board {
-    width: 300px;
+    max-width: 100%; /* Adjusted max-width to make the image smaller */
     height: auto;
-    margin-top: 20px;
+    
+  }
+
+  .note {
+    position: absolute;
+    width: 20%; /* Adjust width as needed */
+    height: auto;
+  }
+  
+  .email {
+    top: 17%;
+    left: 8%;
+    width: 32%;
+  }
+  
+  .instagram {
+    top: 20%;
+    right: 12%;
+    width: 20%;
+  }
+  
+  .tiktok {
+    bottom: 20%;
+    left: 50%;
   }
 
   /* Footer styling */
