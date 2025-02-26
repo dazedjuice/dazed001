@@ -88,7 +88,15 @@ body {
     height: auto;
     
   }
-
+  .arrow-names {
+    position: absolute;
+    top: 10%; /* Adjust top position as needed */
+    left: -20%; /* Adjust left position as needed */
+    width: 150%; /* Increase width to make the image bigger */
+    height: auto;
+  }
+  
+  
   .note {
     position: absolute;
     width: 20%; /* Adjust width as needed */
@@ -129,7 +137,7 @@ body {
   
   /* Apply wiggle animation on hover */
   .note:hover {
-    animation: wiggle 0.7s infinite;
+    animation: wiggle 0.5s ease-in-out infinite;
   }
   /* Footer styling */
   footer {
