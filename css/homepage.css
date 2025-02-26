@@ -14,29 +14,30 @@
 
 /* Button 1 specific background images */
 .button1 {
-  background-image: url('https://dazedjuice.neocities.org/aboutupbutton.png');
+  background-image: url('./images/catshadow.png'); /* Corrected the URL */
 }
 
 .button1:hover {
-  background-image: url('https://dazedjuice.neocities.org/downaboutbutton2.png');
+  background-image: url('./images/catnoshadow.png'); 
 }
 
 /* Button 2 specific background images */
 .button2 {
-  background-image: url('https://dazedjuice.neocities.org/contactbuttonup.png');
+  background-image: url('./images/messagewithshadow.png'); /* Corrected the URL */
 }
 
 .button2:hover {
-  background-image: url('https://dazedjuice.neocities.org/contactbuttondown2.png');
+  background-image: url('./images/messagenoshadow.png'); /* Corrected the URL */
 }
+
 
 /* Button 3 specific background images */
 .button3 {
-  background-image: url('https://dazedjuice.neocities.org/galerryupbutton.png');
+  background-image: url('../images/galleryshadow.png'); /* Corrected the URL */
 }
 
 .button3:hover {
-  background-image: url('https://dazedjuice.neocities.org/gallerydownbutton.png');
+  background-image: url('../images/gallerynoshadow.png'); /* Corrected the URL */
 }
 
 /* Footer styling */
