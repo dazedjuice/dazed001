@@ -73,8 +73,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
   }
-  
+
+  .message-board {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+  }
+
   /* Footer styling */
   footer {
     width: 100%;
