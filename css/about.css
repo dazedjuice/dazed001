@@ -1,78 +1,99 @@
 
-/* Header styling */
-header {
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-between; /* Space between the buttons */
-    align-items: center; /* Center buttons vertically */
-    height: 80px; /* Increase height to fit larger buttons */
-    padding: 20px; /* Replaces large margin */
-    gap: 20px; /* Adds space between items */
-}
-
-#main {
-    text-align: center; /* Centers the images horizontally */
-}
-
-/* Container for the GIFs */
-#gif-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Center the GIFs horizontally */
-    align-items: center; /* Align the GIFs vertically */
-    gap: 20px; /* Adds space between the GIFs */
-    margin: 20px auto; /* Centers the container */
-}
-
-/* Styling for the individual GIFs */
-#aboutmegif, #catgif {
-    max-width: 40%; /* Ensures the GIFs fit within their container */
-    height: auto; /* Maintain the aspect ratio */
-}
-
-/* Footer styling */
-#footer {
-    text-align: center; /* Centers the text inside the footer */
-    padding: 20px; /* Adds space around the footer */
-    color: #90ee90; /* Optional: Change text color */
-    width: 100%; /* Ensures footer spans the full width */
-}
-
+/* General styles */
 body {
-    padding: 10px; /* Adds space between the border and the content inside */
-    margin: 0 auto; /* Centers the body content */
-    box-sizing: border-box; /* Ensures padding is included in the body's dimensions */
-    overflow: auto; /* Allows scrolling */
-    height: 100%; /* Ensures the body takes up the full height */
-}
-
-/* Button styling */
-.button {
-    display: inline-block; /* Makes the link behave like a block-level element */
-    box-sizing: border-box;
-    margin: 0; /* No margin */
-    padding: 0; /* No padding */
-    width: 200px; /* Button width */
-    height: 100px; /* Button height */
-    border: none;
-    background: url('https://dazedjuice.neocities.org/gobackbuttonup.png') no-repeat center center;
-    background-size: contain; /* Fit the image within the button */
-}
-
-.button:hover {
-    background-image: url('https://dazedjuice.neocities.org/gobackdown.png'); /* Change to another button on hover */
-    background-size: contain; /* Ensure consistent scaling */
-}
-
-/* Mobile-specific styles */
-@media screen and (max-width: 768px) {
-    #gif-container {
-        display: flex; /* Enables flexbox layout */
-        flex-direction: column; /* Stacks the GIFs vertically */
-        align-items: center; /* Center the GIFs horizontally */
-        gap: 20px; /* Adds space between the GIFs */
-    }
-
-    #aboutmegif, #catgif {
-        max-width: 80%; /* Ensures the GIFs fit within the screen */
-        height: auto; /* Maintains the aspect ratio */
-    }
-}
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Header styling */
+  header {
+    width: 100%;
+    background-color: aliceblue;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100px;
+  }
+  
+  #logogif {
+    max-height: 70px; /* Adjusted logo size */
+    margin-right: auto;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .button-container a {
+    display: inline-block;
+    width: 100px; /* Fixed width for buttons */
+    height: 100px; /* Fixed height for buttons */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+    position: relative; /* Position relative to contain hover images */
+  }
+  
+  .button-container a img {
+    width: 100%; /* Ensure the image covers the link area */
+    height: 100%; /* Ensure the image covers the link area */
+    object-fit: contain; /* Ensure the image fits within the area */
+  }
+  
+  .button-container a .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0; /* Hide hover image by default */
+  }
+  
+  .button-container a:hover .hover-img {
+    opacity: 1; /* Show hover image on hover */
+  }
+  
+  .button-container a:hover img:not(.hover-img) {
+    opacity: 0; /* Hide original image on hover */
+  }
+  
+  main {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #gif-container {
+    display: flex;
+    flex-direction: row; /* Arrange images horizontally */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    gap: 20px; /* Add space between images */
+  }
+  
+  #gif-container img {
+    max-width: 50%; /* Set maximum width for images */
+    height: auto;
+  }
+  
+  /* Footer styling */
+  footer {
+    width: 100%;
+    text-align: center;
+    color: #90ee90;
+    padding: 20px;
+    margin-top: auto; /* Pushes footer to the bottom */
+  }

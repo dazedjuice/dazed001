@@ -10,17 +10,20 @@ body {
     overflow: hidden; 
   }
   
-  /* Header styling */
-  header {
+/* Header styling */
+header {
     width: 100%;
     background-color: aliceblue;
-    padding: 20px 40px;
+    padding: 20px 30px;
     display: flex;
+    justify-content: space-between; /* Space between logo and buttons */
     align-items: center;
     position: relative;
-    height: 100px;
-  
+    height: 140px;
+    box-sizing: border-box; /* Include padding in width and height calculations */
   }
+
+  
   #logogif {
     max-height: 70px; /* Adjusted logo size */
     margin-right: auto;
@@ -81,6 +84,7 @@ body {
     position: relative; /* Position relative to contain note images */
     width: 50%; /* Adjusted width to fit the page */
     max-width: 600px; /* Maximum width */
+    margin-left: 0px; /* Move the message board to the side */
   }
 
   .message-board {
