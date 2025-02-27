@@ -7,19 +7,22 @@ body {
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 /* Header styling */
 header {
   width: 100%;
   background-color: aliceblue;
-  padding: 20px 40px;
+  padding: 20px 30px;
   display: flex;
+  justify-content: space-between; /* Space between logo and buttons */
   align-items: center;
   position: relative;
-  height: 100px;
+  height: 140px;
+  box-sizing: border-box; /* Include padding in width and height calculations */
 }
+
 
 #logogif {
   max-height: 70px; /* Adjusted logo size */
@@ -36,12 +39,13 @@ header {
 
 .button-container a {
   display: inline-block;
-  width: 100px; /* Fixed width for buttons */
-  height: 100px; /* Fixed height for buttons */
+  width: 100px; /* Adjusted width to fit images better */
+  height: 100px; /* Adjusted height to fit images better */
   padding: 0; /* Remove any padding */
   margin: 0; /* Remove any margin */
   position: relative; /* Position relative to contain hover images */
 }
+
 
 .button-container a img {
   width: 100%; /* Ensure the image covers the link area */
@@ -57,6 +61,7 @@ header {
   height: 100%;
   object-fit: contain;
   opacity: 0; /* Hide hover image by default */
+
 }
 
 .button-container a:hover .hover-img {
