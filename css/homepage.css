@@ -117,12 +117,29 @@ footer {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+
+  body {
+    overflow: hidden; /* Prevent scrolling on mobile devices */
+  }
+  
+  header {
+    justify-content: space-between; /* Center the content in the header */
+  }
+
   .hamburger {
-    display: block;
+    display: block; /* Show hamburger on mobile */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hamburger img {
+    width: 50px; /* Adjust the width of the hamburger image */
+    height: 50px; /* Adjust the height of the hamburger image */
   }
 
   .button-container {
-    display: none;
+    display: none; /* Hide buttons by default on mobile */
     flex-direction: column;
     position: static;
     transform: none;
@@ -130,7 +147,7 @@ footer {
   }
 
   .button-container.show {
-    display: flex;
+    display: flex; /* Show buttons when hamburger is clicked */
   }
 
   .button-container a {
@@ -143,8 +160,8 @@ footer {
   }
 
   .world-image {
-    max-width: 40%;
-    max-height: 40%;
+    max-width: 60%;
+    max-height: 60%;
   }
 
   footer {
