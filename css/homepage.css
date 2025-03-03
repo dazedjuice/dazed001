@@ -33,6 +33,13 @@ header {
   margin-right: auto;
 }
 
+
+.hamburger {
+  display: none; /* Hide hamburger by default */
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .button-container {
   display: flex;
   gap: 30px;
@@ -110,17 +117,20 @@ footer {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
+  .hamburger {
+    display: block;
   }
 
   .button-container {
+    display: none;
     flex-direction: column;
     position: static;
     transform: none;
     gap: 10px;
+  }
+
+  .button-container.show {
+    display: flex;
   }
 
   .button-container a {
@@ -133,8 +143,8 @@ footer {
   }
 
   .world-image {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 40%;
+    max-height: 40%;
   }
 
   footer {
