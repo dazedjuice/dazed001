@@ -224,9 +224,10 @@ footer {
   html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: hidden; /* Prevent vertical scrolling */
-    height: 110%; /* Ensure full height */
+    height: 100%; /* Ensure full height */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+  
   }
 
   header {
@@ -290,7 +291,7 @@ footer {
 
   .message-board-container {
     position: relative; /* Ensure the container is positioned relative */
-    width: 90%; /* Adjusted width for responsiveness */
+    width: 100%; /* Adjusted width for responsiveness */
     max-width: 100%;
     margin: 0 auto; /* Center the board */
     display: flex;
@@ -303,8 +304,8 @@ footer {
   .message-board {
     content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
     max-width: 100%; /* Ensure the image does not exceed the container width */
-    max-height: calc(70vh - 160px); /* Ensure the image does not exceed the viewport height minus header and footer */
-    width: auto; /* Maintain aspect ratio */
+    max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
+
     height: auto; /* Maintain aspect ratio */
   }
 
@@ -318,11 +319,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: wiggle 0.5s ease-in-out infinite; /* Apply wiggle animation constantly */
+    animation: wiggle  1s ease-in-out infinite; /* Apply wiggle animation constantly */
   }
 
   .email {
-    top: 10%; /* Move higher up */
+    top: 7%; /* Move higher up */
     left: 25%;
     width: 100px; /* Increase width */
     height: 80px; /* Increase height */
