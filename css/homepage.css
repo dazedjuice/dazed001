@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: aliceblue;
   background-image: url("../images/background.png");
   background-size: cover; /* Ensure the background image covers the entire area */
@@ -175,7 +175,7 @@ footer {
   html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: hidden; /* Prevent vertical scrolling */
-    height: 100%; /* Ensure full height */
+    height: 110%; /* Ensure full height */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
   }

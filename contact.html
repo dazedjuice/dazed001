@@ -51,14 +51,17 @@
     </div>
   </header>
 
-</div>
 
 <main>
   <!-- Main content for the contact page goes here -->
 
   <!-- Message board illustration -->
   <div class="message-board-container">
-    <img src="./imagescontact/boardtest.gif" alt="Message Board" class="message-board">
+    <picture>
+        <source srcset="./imagescontact/boardmobile.gif" media="(max-width: 768px)">
+        <img src="./imagescontact/boardtest.gif" alt="Message Board" class="message-board">
+    </picture>
+
 
      <!-- Arrow names image -->
      <img src="./imagescontact/arrownames.png" alt="Arrow Names" class="arrow-names">
@@ -80,6 +83,9 @@
 <footer>
     <p>&copy; i tried 2024</p>
 </footer>
+
+
+<script src="./javascript/main.js"></script>
 
 </body>
 </html>
