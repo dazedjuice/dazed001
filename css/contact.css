@@ -245,7 +245,7 @@ footer {
   }
 
   .message-board {
-    content: url("../imagescontact/boardtest-mobile.gif"); /* Use the mobile version of the message board */
+    content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
     max-width: 100%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 160px); /* Ensure the image does not exceed the viewport height minus header and footer */
     width: auto; /* Maintain aspect ratio */
@@ -272,16 +272,16 @@ footer {
   }
 
   .instagram {
-    bottom: 1000%; /* Adjust bottom position */
-    left: 50%; /* Keep it centered */
+    top: 65%; /* Adjust top position */
+    left: 45%; /* Keep it centered */
     transform: translateX(-50%); /* Center it properly */
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
   }
 
   .tiktok {
-    top: 10%; /* Move higher up */
-    left: 55%;
+    top: 20%; /* Move higher up */
+    left: 60%;
     transform: translateX(-50%);
     width: 75px; /* Fixed width */
     height: 55px; /* Fixed height */
