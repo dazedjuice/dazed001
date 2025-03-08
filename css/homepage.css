@@ -53,6 +53,7 @@ header {
   padding: 0; /* Remove any padding */
   margin: 0; /* Remove any margin */
   position: relative; /* Position relative to contain hover images */
+  outline: none; /* Remove blue outline on tap */
 }
 
 .button-container a img {
@@ -102,7 +103,6 @@ main {
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
 }
-
 
 /* Footer styling */
 footer {
@@ -154,6 +154,7 @@ footer {
   display: flex; /* Ensure the link is a flex container */
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
+  outline: none; /* Remove blue outline on tap */
 }
 
 .overlay-content a img {
@@ -161,7 +162,6 @@ footer {
   height: 100%; /* Ensure the image covers the link area */
   object-fit: contain; /* Ensure the image fits within the area */
 }
-
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
@@ -191,7 +191,6 @@ footer {
     visibility: hidden;
   }
 
-
   .overlay-menu {
     display: none; /* Hide overlay by default */
   }
@@ -213,12 +212,18 @@ footer {
     display: flex; /* Ensure the link is a flex container */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
+    outline: none; /* Remove blue outline on tap */
   }
 
   .overlay-content a img {
     width: 100%; /* Ensure the image covers the link area */
     height: 100%; /* Ensure the image covers the link area */
     object-fit: contain; /* Ensure the image fits within the area */
+  }
+
+  .button-container a .hover-img,
+  .overlay-content a .hover-img {
+    display: none; /* Hide hover image on mobile */
   }
 
   .world-image {
