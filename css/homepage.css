@@ -37,6 +37,7 @@ header {
   font-size: 30px;
   cursor: pointer;
   outline: none; /* Remove blue outline on tap */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
 }
 
 .button-container {
@@ -55,6 +56,7 @@ header {
   margin: 0; /* Remove any margin */
   position: relative; /* Position relative to contain hover images */
   outline: none; /* Remove blue outline on tap */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
 }
 
 .button-container a img {
@@ -156,6 +158,7 @@ footer {
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
   outline: none; /* Remove blue outline on tap */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
 }
 
 .overlay-content a img {
@@ -181,6 +184,7 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     outline: none; /* Remove blue outline on tap */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
   }
 
   .hamburger img {
@@ -215,6 +219,7 @@ footer {
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
     outline: none; /* Remove blue outline on tap */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
   }
 
   .overlay-content a img {
