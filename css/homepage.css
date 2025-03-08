@@ -1,5 +1,5 @@
 /* General styles */
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -122,6 +122,14 @@ footer {
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevent scrolling within the overlay */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for overlay */
+}
+
+.overlay-menu.show {
+  display: flex; /* Show overlay menu when active */
+  opacity: 1; /* Fade in */
+  transform: scale(1); /* Scale to full size */
 }
 
 .overlay-content {
@@ -137,8 +145,8 @@ footer {
   color: black; /* Change text color to black */
   text-decoration: none;
   font-size: 24px;
-  width: 100px; /* Adjust the width of the buttons in the overlay */
-  height: 100px; /* Adjust the height of the buttons in the overlay */
+  width: 120px; /* Adjust the width of the buttons in the overlay */
+  height: 120px; /* Adjust the height of the buttons in the overlay */
 }
 
 .overlay-content a img {
@@ -199,7 +207,7 @@ footer {
   .overlay-menu.show {
     display: flex; /* Show overlay menu when active */
     opacity: 1; /* Fade in */
-  
+    transform: scale(1); /* Scale to full size */
   }
 
   .overlay-content {
