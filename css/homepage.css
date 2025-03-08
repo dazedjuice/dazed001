@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   background-color: aliceblue;
   background-image: url("../images/background.png");
   background-size: cover; /* Ensure the background image covers the entire area */

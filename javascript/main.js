@@ -1,14 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+  // Common functionality for both pages
+  const hamburger = document.getElementById('hamburger');
   const overlayMenu = document.querySelector('.overlay-menu');
   const overlayContent = document.querySelector('.overlay-content');
-  const hamburger = document.querySelector('.hamburger');
   const body = document.body;
 
-  // Show overlay menu with animation
-  hamburger.addEventListener('click', () => {
-    overlayMenu.classList.add('show');
-    body.style.overflow = 'hidden'; // Prevent scrolling when overlay is active
-  });
+  if (hamburger) {
+    hamburger.addEventListener('click', function() {
+      overlayMenu.classList.toggle('show');
+      body.style.overflow = overlayMenu.classList.contains('show') ? 'hidden' : 'auto'; // Toggle scrolling based on overlay state
+    });
+  }
 
   // Hide overlay menu when clicking on the white part
   overlayMenu.addEventListener('click', (event) => {
@@ -38,4 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 300); // Adjust the delay as needed
     });
   });
+
+  // Functionality specific to the contact page
+  const emailLink = document.querySelector('.note.email');
+  const instagramLink = document.querySelector('.note.instagram');
+  const tiktokLink = document.querySelector('.note.tiktok');
+
+  if (emailLink && instagramLink && tiktokLink) {
+    // Add any specific event listeners or functionality for the contact page
+    emailLink.addEventListener('click', function() {
+      console.log('Email link clicked');
+    });
+
+    instagramLink.addEventListener('click', function() {
+      console.log('Instagram link clicked');
+    });
+
+    tiktokLink.addEventListener('click', function() {
+      console.log('TikTok link clicked');
+    });
+  }
+
+  // Functionality specific to the homepage
+  const homepageElement = document.querySelector('.homepage-specific-element');
+
+  if (homepageElement) {
+    // Add any specific event listeners or functionality for the homepage
+    homepageElement.addEventListener('click', function() {
+      console.log('Homepage specific element clicked');
+    });
+  }
 });
