@@ -332,8 +332,8 @@ footer {
     top: 65%; /* Adjust top position */
     left: 30%; /* Keep it centered */
     transform: translateX(-50%); /* Center it properly */
-    width: 95px; /* Increase width */
-    height: 95px; /* Increase height */
+    width: 80px; /* Increase width */
+    height: 80px; /* Increase height */
   }
 
   .tiktok {
