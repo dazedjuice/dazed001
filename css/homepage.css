@@ -11,7 +11,10 @@ html, body {
   background-repeat: no-repeat; /* Prevent the background image from repeating */
   display: flex;
   flex-direction: column;
-  overflow: hidden; 
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
+  padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
 }
 
 /* Header styling */
@@ -170,8 +173,11 @@ footer {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   html, body {
-    overflow: hidden; /* Prevent scrolling on mobile devices */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
     height: 100%; /* Ensure full height */
+    padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
+    padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
   }
 
   header {
