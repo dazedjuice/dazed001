@@ -167,8 +167,9 @@ footer {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-  body {
+  html, body {
     overflow: hidden; /* Prevent scrolling on mobile devices */
+    height: 100%; /* Ensure full height */
   }
 
   header {
@@ -197,6 +198,8 @@ footer {
 
   .overlay-menu.show {
     display: flex; /* Show overlay menu when active */
+    opacity: 1; /* Fade in */
+  
   }
 
   .overlay-content {
@@ -205,8 +208,8 @@ footer {
   }
 
   .overlay-content a {
-    width: 100px; /* Adjust the width of the buttons in the overlay */
-    height: 100px; /* Adjust the height of the buttons in the overlay */
+    width: 120px; /* Adjust the width of the buttons in the overlay */
+    height: 120px; /* Adjust the height of the buttons in the overlay */
   }
 
   .overlay-content a img {
@@ -216,7 +219,7 @@ footer {
   }
 
   .world-image {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 80%;
+    max-height: 80%;
   }
 }
