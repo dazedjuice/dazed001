@@ -15,6 +15,7 @@ html, body {
   overflow-y: hidden; /* Prevent vertical scrolling */
   padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
   padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+  viewport-fit: cover; /* Ensure the viewport fits the screen */
 }
 
 /* Header styling */
@@ -176,6 +177,7 @@ footer {
     height: 100%; /* Ensure full height */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+    viewport-fit: cover; /* Ensure the viewport fits the screen */
   }
 
   header {
@@ -258,7 +260,7 @@ footer {
 
   .note {
     position: absolute; /* Ensure notes are positioned absolutely within the container */
-    width: 30%; /* Adjust width as needed */
+    width: 40%; /* Increase width */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,23 +269,23 @@ footer {
   .email {
     top: 10%; /* Move higher up */
     left: 30%;
-    width: 60px; /* Fixed width */
-    height: 50px; /* Fixed height */
+    width: 80px; /* Increase width */
+    height: 70px; /* Increase height */
   }
 
   .instagram {
     top: 65%; /* Adjust top position */
     left: 45%; /* Keep it centered */
     transform: translateX(-50%); /* Center it properly */
-    width: 60px; /* Adjust size as needed */
-    height: 60px;
+    width: 80px; /* Increase width */
+    height: 80px; /* Increase height */
   }
 
   .tiktok {
     top: 20%; /* Move higher up */
     left: 60%;
     transform: translateX(-50%);
-    width: 75px; /* Fixed width */
-    height: 55px; /* Fixed height */
+    width: 90px; /* Increase width */
+    height: 70px; /* Increase height */
   }
 }
