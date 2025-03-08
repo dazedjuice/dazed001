@@ -36,6 +36,7 @@ header {
   display: none; /* Hide hamburger by default */
   font-size: 30px;
   cursor: pointer;
+  outline: none; /* Remove blue outline on tap */
 }
 
 .button-container {
@@ -179,6 +180,7 @@ footer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    outline: none; /* Remove blue outline on tap */
   }
 
   .hamburger img {
