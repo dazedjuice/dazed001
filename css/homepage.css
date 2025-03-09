@@ -13,9 +13,8 @@ html, body {
   flex-direction: column;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: hidden; /* Prevent vertical scrolling */
- /* Fill the entire screen, including iPhone's safe area */
- min-height: 100dvh; /* Newer units for full height */
-  background-color: red !important; /* Fallback color */
+
+ 
 
 }
 
