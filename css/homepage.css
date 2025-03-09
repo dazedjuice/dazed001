@@ -3,20 +3,18 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: aliceblue;
   background-image: url("../images/background.png");
   background-size: cover; /* Ensure the background image covers the entire area */
-  background-position: center; /* Center the background image */
+  background-position: center top; /* Center the background and move it upwards */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
   display: flex;
   flex-direction: column;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: hidden; /* Prevent vertical scrolling */
-
- 
-
 }
+
 
 /* Header styling */
 header {
@@ -181,16 +179,23 @@ footer {
 }
 
 /* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   html, body {
-    min-height: 100vh; /* Ensures full screen height */
-    height: 100vh; /* Prevents scrolling issues */
+    height: 100%; /* Ensure full height of the viewport */
+    min-height: 100vh;
+    width: 100%;
     background-size: cover;
-    background-position: top center; /* Ensures background reaches the top */
-    padding-top: env(safe-area-inset-top); /* Fix for iOS notch */
-    padding-bottom: env(safe-area-inset-bottom); /* Prevents footer from being cut */
+    background-position: center top; /* Moves the background up */
+    padding-top: env(safe-area-inset-top); /* Account for the iOS notch */
+    padding-bottom: env(safe-area-inset-bottom); /* Keeps footer visible */
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+
+
+  main {
+    flex-grow: 1; /* Pushes footer down */
   }
 
   header {
@@ -216,10 +221,7 @@ footer {
     visibility: hidden;
   }
 
-  .button-container a .hover-img,
-.overlay-content a .hover-img {
-  display: none; /* Hide hover image on mobile */
-}
+
 
   .overlay-menu {
     display: none; /* Hide overlay by default */
@@ -267,7 +269,9 @@ footer {
     position: relative;
     width: 100%;
     text-align: center;
+    color: #90ee90;
     padding: 20px;
+    margin-top: auto; /* Pushes the footer to the bottom */
   }
 }
 
