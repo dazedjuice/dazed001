@@ -178,15 +178,25 @@ footer {
   height: auto; /* Maintain aspect ratio */
 }
 
+/* Safe Zone Section */
+.safe-zone {
+  width: 100%;
+  height: env(safe-area-inset-top); /* Ensures it matches the height of the status bar */
+  background-color: #f0f0f0; /* Background for the safe zone */
+  background-image: url("../images/background.png"); /* If you want a background image */
+  background-size: cover;
+  background-position: top center; /* Ensure background is aligned */
+}
+
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) { 
   html, body {
     min-height: 100vh; /* Ensures full screen coverage */
-    height: auto; /* Allow it to grow with content */
     width: 100%;
     background-size: cover;
-    background-position: center top; /* Moves the background up */
-    padding-top: env(safe-area-inset-top); /* Adjust for iOS notch */
+    background-position: top; /* Move background to top */
+    padding-top: env(safe-area-inset-top); /* Ensure background takes safe area into account */
     padding-bottom: env(safe-area-inset-bottom); /* Keeps footer visible */
     display: flex;
     flex-direction: column;
