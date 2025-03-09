@@ -15,6 +15,14 @@ html, body {
   overflow-y: auto; /* Allow scrolling instead of hiding overflow */
 }
 
+/* Safe Zone Section */
+.safe-zone {
+  width: 100%;
+  height: env(safe-area-inset-top); /* Ensures it matches the height of the status bar */
+  background-image: url("../images/background.png"); /* If you want a background image */
+  background-size: cover;
+  background-position: top center; /* Ensure background is aligned */
+}
 
 /* Header styling */
 header {
@@ -109,13 +117,6 @@ main {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Footer styling */
-footer {
-  width: 100%;
-  text-align: center;
-  color: #90ee90;
-  padding: 20px;
-}
 
 /* Overlay Menu Styling */
 .overlay-menu {
@@ -177,16 +178,20 @@ footer {
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
 }
-
-/* Safe Zone Section */
-.safe-zone {
+/* Footer styling */
+footer {
   width: 100%;
-  height: env(safe-area-inset-top); /* Ensures it matches the height of the status bar */
-  background-color: #f0f0f0; /* Background for the safe zone */
-  background-image: url("../images/background.png"); /* If you want a background image */
-  background-size: cover;
-  background-position: top center; /* Ensure background is aligned */
+  text-align: center; /* Center the text inside the footer */
+  color: #90ee90;
+  padding: 20px 0; /* Set uniform padding on top and bottom */
+  margin-top: auto; /* Push footer to the bottom */
+  background: transparent; /* Ensure footer has no background */
+  box-sizing: border-box; /* Include padding within the width */
+  padding-left: 20px;  /* Add consistent left padding */
+  padding-right: 20px; /* Add consistent right padding */
 }
+
+
 
 
 /* Media Queries for Mobile Devices */
@@ -200,6 +205,12 @@ footer {
     padding-bottom: env(safe-area-inset-bottom); /* Keeps footer visible */
     display: flex;
     flex-direction: column;
+  }
+  .safe-zone {
+    height: env(safe-area-inset-top); /* Ensure the safe zone gets the height of the status bar */
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: top center;
   }
 
 
@@ -288,7 +299,8 @@ footer {
   color: #90ee90;
   padding: 20px;
   margin-top: auto;
-  background: inherit; /* Ensures it gets the same background */
+  background: transparent;
+
 
 }
 }
