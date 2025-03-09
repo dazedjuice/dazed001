@@ -313,9 +313,19 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: wiggle  1s ease-in-out infinite; /* Apply wiggle animation constantly */
+    animation: float  1s ease-in-out infinite; /* Apply wiggle animation constantly */
   }
-
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 footer {
   position: relative;
