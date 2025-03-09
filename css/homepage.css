@@ -3,16 +3,16 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100%;
+  height: 100vh; /* Ensure it covers the full viewport height */
   background-color: aliceblue;
   background-image: url("../images/background.png");
-  background-size: cover; /* Ensure the background image covers the entire area */
-  background-position: center top; /* Center the background and move it upwards */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: hidden; /* Prevent vertical scrolling */
+  overflow-x: hidden;
+  overflow-y: auto; /* Allow scrolling instead of hiding overflow */
 }
 
 
@@ -186,11 +186,10 @@ footer {
     width: 100%;
     background-size: cover;
     background-position: center top; /* Moves the background up */
-    padding-top: env(safe-area-inset-top); /* Account for the iOS notch */
+    padding-top: env(safe-area-inset-top); /* Adjust for iOS notch */
     padding-bottom: env(safe-area-inset-bottom); /* Keeps footer visible */
     display: flex;
     flex-direction: column;
-    position: relative;
   }
 
 
@@ -221,7 +220,10 @@ footer {
     visibility: hidden;
   }
 
-
+  .button-container a .hover-img,
+.overlay-content a .hover-img {
+  display: none; /* Hide hover image on mobile */
+}
 
   .overlay-menu {
     display: none; /* Hide overlay by default */
@@ -265,14 +267,19 @@ footer {
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
   }
-  footer {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    color: #90ee90;
-    padding: 20px;
-    margin-top: auto; /* Pushes the footer to the bottom */
-  }
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #90ee90;
+  padding: 20px;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
 }
 
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    min-height: -webkit-fill-available;
+  }
+}
 
