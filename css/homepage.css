@@ -181,8 +181,8 @@ footer {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) { 
   html, body {
-    height: 100%; /* Ensure full height of the viewport */
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures full screen coverage */
+    height: auto; /* Allow it to grow with content */
     width: 100%;
     background-size: cover;
     background-position: center top; /* Moves the background up */
@@ -194,7 +194,11 @@ footer {
 
 
   main {
-    flex-grow: 1; /* Pushes footer down */
+    
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
   header {
@@ -273,7 +277,9 @@ footer {
   text-align: center;
   color: #90ee90;
   padding: 20px;
-  margin-top: auto; /* Pushes the footer to the bottom */
+  margin-top: auto;
+  background: inherit; /* Ensures it gets the same background */
+
 }
 }
 
