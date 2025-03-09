@@ -70,4 +70,5 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Homepage specific element clicked');
     });
   }
+  
 });
