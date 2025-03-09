@@ -12,7 +12,7 @@ html, body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  
+  overflow-y: hidden;
 
 }
 
@@ -110,6 +110,18 @@ main {
   height: auto; /* Maintain aspect ratio */
 }
 
+.cat-image{
+
+    position: absolute; /* Ensure notes are positioned absolutely within the container */
+    width: 10%; /* Increase width */
+    top: 50%; /* Adjust top position */
+    left: 35%; /* Keep it centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: wiggle  1s ease-in-out infinite; /* Apply wiggle animation constantly */
+  }
+
 
 /* Overlay Menu Styling */
 .overlay-menu {
@@ -197,20 +209,12 @@ footer {
     height: 100%; /* Ensure full height */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
-    margin: 0%;
+   
   
   }
 
   header {
     justify-content: space-between; /* Space between logo and buttons */
-  }
-
-  main {
-    
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
   }
 
 
@@ -275,10 +279,22 @@ footer {
   }
 
   .world-image {
-    max-width: 100%; /* Ensure the image does not exceed the container width */
+    max-width: 80%; /* Ensure the image does not exceed the container width */
     max-height: calc(80vh - 160px); /* Ensure the image does not exceed the viewport height minus header and footer */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
+  }
+
+.cat-image{
+
+    position: absolute; /* Ensure notes are positioned absolutely within the container */
+    width: 40%; /* Increase width */
+    top: 50%; /* Adjust top position */
+    left: 15%; /* Keep it centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: wiggle  1s ease-in-out infinite; /* Apply wiggle animation constantly */
   }
 
 
