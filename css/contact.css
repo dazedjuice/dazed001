@@ -161,10 +161,14 @@ main {
 /* Footer styling */
 footer {
   width: 100%;
-  text-align: center;
+  text-align: center; /* Center the text inside the footer */
   color: #90ee90;
-  padding: 20px;
-  margin-top: auto; /* Pushes footer to the bottom */
+  padding: 20px 0; /* Set uniform padding on top and bottom */
+  margin-top: auto; /* Push footer to the bottom */
+  background: transparent; /* Ensure footer has no background */
+  box-sizing: border-box; /* Include padding within the width */
+  padding-left: 20px;  /* Add consistent left padding */
+  padding-right: 20px; /* Add consistent right padding */
 }
 
 /* Overlay Menu Styling */
@@ -344,4 +348,15 @@ footer {
     width: 90px; /* Increase width */
     height: 70px; /* Increase height */
   }
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #90ee90;
+  padding: 20px;
+  margin-top: auto;
+  background: transparent;
+
+
+}
 }

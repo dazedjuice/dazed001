@@ -12,17 +12,10 @@ html, body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  overflow-y: auto; /* Allow scrolling instead of hiding overflow */
+  
+
 }
 
-/* Safe Zone Section */
-.safe-zone {
-  width: 100%;
-  height: env(safe-area-inset-top); /* Ensures it matches the height of the status bar */
-  background-image: url("../images/background.png"); /* If you want a background image */
-  background-size: cover;
-  background-position: top center; /* Ensure background is aligned */
-}
 
 /* Header styling */
 header {
@@ -178,6 +171,8 @@ main {
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
 }
+
+
 /* Footer styling */
 footer {
   width: 100%;
@@ -197,22 +192,18 @@ footer {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) { 
   html, body {
-    min-height: 100vh; /* Ensures full screen coverage */
-    width: 100%;
-    background-size: cover;
-    background-position: top; /* Move background to top */
-    padding-top: env(safe-area-inset-top); /* Ensure background takes safe area into account */
-    padding-bottom: env(safe-area-inset-bottom); /* Keeps footer visible */
-    display: flex;
-    flex-direction: column;
-  }
-  .safe-zone {
-    height: env(safe-area-inset-top); /* Ensure the safe zone gets the height of the status bar */
-    background-image: url("../images/background.png");
-    background-size: cover;
-    background-position: top center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    height: 100%; /* Ensure full height */
+    padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
+    padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+    margin: 0%;
+  
   }
 
+  header {
+    justify-content: space-between; /* Space between logo and buttons */
+  }
 
   main {
     
@@ -222,9 +213,6 @@ footer {
       align-items: center;
   }
 
-  header {
-    padding-top: env(safe-area-inset-top); /* Adjust header for the notch */
-  }
 
   .hamburger {
     display: block; /* Show hamburger on mobile */
@@ -292,6 +280,8 @@ footer {
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
   }
+
+
 footer {
   position: relative;
   width: 100%;
@@ -303,11 +293,14 @@ footer {
 
 
 }
+
 }
 
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    min-height: -webkit-fill-available;
+@supports(padding: max(0px)) {
+  .post {
+     padding-left: max(12px, constant(safe-area-inset-left));
+     padding-right: max(12px, constant(safe-area-inset-right));
   }
 }
+
 
