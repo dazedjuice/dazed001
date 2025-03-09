@@ -237,6 +237,11 @@ footer {
   header {
     justify-content: space-between; /* Space between logo and buttons */
   }
+  
+  #logogif {
+    max-height: 50px; /* Adjusted logo size */
+    margin-right: auto;
+  }
 
   .hamburger {
     display: block; /* Show hamburger on mobile */
@@ -307,7 +312,7 @@ footer {
 
   .message-board {
     content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
-    max-width: 120%; /* Ensure the image does not exceed the container width */
+    max-width: 140%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
 
     height: auto; /* Maintain aspect ratio */
