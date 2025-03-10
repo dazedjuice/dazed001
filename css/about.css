@@ -236,10 +236,10 @@ footer {
   }
 
   .about-container {
-    max-height: calc(80vh - 160px); /* Ensure it does not exceed viewport */
+    
     display: flex;
     flex-direction: column-reverse; /* Moves About-text above About-me */
-    gap: 30px;
+    gap: 10px;
     align-items: center; /* Centers content */
     max-width: 100%;
     max-height: 100%;
