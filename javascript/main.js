@@ -115,5 +115,15 @@ document.addEventListener('DOMContentLoaded', function() {
     catImage.addEventListener('mousedown', handleMouseDown);
     catImage.ondragstart = () => false;
   }
+// Assuming you have a reference to the cat element, e.g.,
+const cat = document.querySelector('.cat-image');
+
+// Initialize Draggable on the cat element
+Draggable.create(cat, {
+  type: "x,y", // Allow dragging in both x and y directions
+  edgeResistance: 0.65, // Optional: Add some resistance when dragging near the edges
+  bounds: "body", // Optional: Restrict dragging within the body
+  inertia: true // Optional: Add inertia to the dragging
+});
 
 });
