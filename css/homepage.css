@@ -267,6 +267,11 @@ footer {
     display: flex; /* Show overlay menu when active */
     opacity: 1; /* Fade in */
     transform: scale(1); /* Scale to full size */
+    position: fixed;
+    z-index: 1000; /* Ensure the overlay is above everything else */
+    /* Other styles for the overlay */
+
+/* Other styles for your page */
   }
 
   .overlay-content {
@@ -295,6 +300,11 @@ footer {
   .overlay-content a .hover-img {
     display: none; /* Hide hover image on mobile */
   }
+.world-image-container{
+  z-index: 998; /* Ensure this container is below the overlay */
+  position: relative; /* Needed for absolute positioning of the cat */
+}
+
 
   .world-image {
     max-width: 80%; /* Ensure the image does not exceed the container width */
@@ -309,12 +319,22 @@ footer {
     width: 40%; /* Increase width */
     top: 50%; /* Adjust top position */
     left: 15%; /* Keep it centered */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     user-select: none; /* Prevents text selection */
     touch-action: none; /* Prevents default touch behavior */
+    
+}
+img.cat-image {
+  z-index: 999;
+  transition: none;
+}
+
+img.cat-image.ai-style-change-1 {
+  /* Remove these lines or comment them out */
+  z-index: auto; /* or remove this line */
+  transition: none; /* or remove this line */
+}
+  
   }
   @keyframes float {
     0% {
@@ -340,7 +360,7 @@ footer {
 
 }
 
-}
+
 
 @supports(padding: max(0px)) {
   .post {
