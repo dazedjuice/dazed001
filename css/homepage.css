@@ -190,7 +190,7 @@ main {
 .cat-image{
 
   position: absolute; /* Ensure notes are positioned absolutely within the container */
-  width: 15%; /* Increase width */
+  width: 12%; /* Increase width */
   top: 50%; /* Adjust top position */
   left: 35%; /* Keep it centered */
   user-select: none; /* Prevents text selection */
@@ -269,9 +269,7 @@ footer {
     transform: scale(1); /* Scale to full size */
     position: fixed;
     z-index: 1000; /* Ensure the overlay is above everything else */
-    /* Other styles for the overlay */
-
-/* Other styles for your page */
+   
   }
 
   .overlay-content {
