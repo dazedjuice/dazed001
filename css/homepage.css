@@ -110,15 +110,6 @@ main {
   height: auto; /* Maintain aspect ratio */
 }
 
-.cat-image{
-
-    position: absolute; /* Ensure notes are positioned absolutely within the container */
-    width: 15%; /* Increase width */
-    top: 50%; /* Adjust top position */
-    left: 35%; /* Keep it centered */
-    user-select: none; /* Prevents text selection */
-    touch-action: none; /* Prevents default touch behavior */
-  }
 
   @keyframes float {
     0% {
@@ -196,6 +187,15 @@ main {
   height: auto; /* Maintain aspect ratio */
 }
 
+.cat-image{
+
+  position: absolute; /* Ensure notes are positioned absolutely within the container */
+  width: 15%; /* Increase width */
+  top: 50%; /* Adjust top position */
+  left: 35%; /* Keep it centered */
+  user-select: none; /* Prevents text selection */
+  touch-action: none; /* Prevents default touch behavior */
+}
 
 /* Footer styling */
 footer {
@@ -272,6 +272,7 @@ footer {
   .overlay-content {
     justify-content: center; /* Center the buttons vertically */
     height: 100%; /* Ensure the overlay content takes full height */
+    z-index: 1001; /* Ensure it is above the overlay menu */
   }
 
   .overlay-content a {
