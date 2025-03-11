@@ -113,13 +113,11 @@ main {
 .cat-image{
 
     position: absolute; /* Ensure notes are positioned absolutely within the container */
-    width: 10%; /* Increase width */
+    width: 15%; /* Increase width */
     top: 50%; /* Adjust top position */
     left: 35%; /* Keep it centered */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: float  1s ease-in-out infinite; /* Apply wiggle animation constantly */
+    user-select: none; /* Prevents text selection */
+    touch-action: none; /* Prevents default touch behavior */
   }
 
   @keyframes float {
@@ -306,14 +304,16 @@ footer {
 
 .cat-image{
 
-    position: absolute; /* Ensure notes are positioned absolutely within the container */
+
     width: 40%; /* Increase width */
     top: 50%; /* Adjust top position */
     left: 15%; /* Keep it centered */
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: float  1s ease-in-out infinite; /* Apply wiggle animation constantly */
+    position: absolute;
+    user-select: none; /* Prevents text selection */
+    touch-action: none; /* Prevents default touch behavior */
   }
   @keyframes float {
     0% {

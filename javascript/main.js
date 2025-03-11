@@ -63,12 +63,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Functionality specific to the homepage
   const homepageElement = document.querySelector('.homepage-specific-element');
+  const catImage = document.querySelector('img.cat-image'); // Select the cat image
 
-  if (homepageElement) {
-    // Add any specific event listeners or functionality for the homepage
-    homepageElement.addEventListener('click', function() {
-      console.log('Homepage specific element clicked');
-    });
-  }
+  if (catImage) {
+    // Remove previous event listeners if they exist
+    catImage.onmousedown = null;
   
+    let initialX, initialY, offsetX, offsetY;
+    let isDragging = false;
+  
+    const handleMouseDown = (event) => {
+      isDragging = true;
+      initialX = event.clientX;
+      initialY = event.clientY;
+      offsetX = parseFloat(window.getComputedStyle(catImage)['left']);
+      offsetY = parseFloat(window.getComputedStyle(catImage)['top']);
+  
+      // Add mousemove and mouseup listeners to the document
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+    };
+  
+    const handleMouseMove = (event) => {
+      if (!isDragging) return;
+  
+      const dx = event.clientX - initialX;
+      const dy = event.clientY - initialY;
+      const newLeft = offsetX + dx;
+      const newTop = offsetY + dy;
+  
+      // Constrain the drag within the viewport
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const imageWidth = catImage.offsetWidth;
+      const imageHeight = catImage.offsetHeight;
+  
+      const constrainedLeft = Math.max(0, Math.min(newLeft, viewportWidth - imageWidth));
+      const constrainedTop = Math.max(0, Math.min(newTop, viewportHeight - imageHeight));
+  
+      catImage.style.left = `${constrainedLeft}px`;
+      catImage.style.top = `${constrainedTop}px`;
+    };
+  
+    const handleMouseUp = (event) => {
+      isDragging = false;
+      // Remove mousemove and mouseup listeners from the document
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  
+    catImage.addEventListener('mousedown', handleMouseDown);
+    catImage.ondragstart = () => false;
+  }
+
 });
