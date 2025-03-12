@@ -312,7 +312,8 @@ footer {
 
   .message-board {
     
-    max-width: none; /* Ensure the image does not exceed the container width */
+    max-width: 100% !important; /* Force full width */
+    max-height: 85vh !important; /* Make it taller */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
     width: 100%; /* Adjusted width */
     height: auto; /* Maintain aspect ratio */
