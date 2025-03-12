@@ -301,6 +301,7 @@ footer {
 .world-image-container{
   z-index: 998; /* Ensure this container is below the overlay */
   position: relative; /* Needed for absolute positioning of the cat */
+  justify-content: center; /* Center the image horizontally */
 }
 
 
