@@ -235,6 +235,7 @@ footer {
   }
 
   header {
+    margin top: 20px;
     justify-content: space-between; /* Space between logo and buttons */
   }
   
