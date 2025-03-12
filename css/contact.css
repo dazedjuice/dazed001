@@ -374,9 +374,12 @@ footer {
 
 
   .message-board {
-    width: 65vw !important;  /* Keep the size as you want */
-    max-height: 60vh !important; /* Limit the image height */
-    object-fit: contain; /* Ensure the aspect ratio is maintained */
+    width: 65vw !important;
+    max-height: 60vh !important;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;  /* This will center the image horizontally */
+    
   }
   header {
     margin-top: 22px;  /* Move the header down */
