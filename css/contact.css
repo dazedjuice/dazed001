@@ -371,7 +371,7 @@ footer {
 @supports (-webkit-touch-callout: none) {
   .message-board {
       width: 100vw !important; /* Force full width */
-      height: 70vh !important; /* Use most of the screen height */
+      height: 100vh !important; /* Use most of the screen height */
       max-width: none !important; /* Remove any width restrictions */
       max-height: none !important; /* Remove height limits */
   }
