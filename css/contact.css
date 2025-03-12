@@ -300,8 +300,8 @@ footer {
 
   .message-board-container {
     position: relative; /* Ensure the container is positioned relative */
-    width: 90%; /* Adjusted width for responsiveness */
-    max-width: 100%;
+    width: 110%; /* Adjusted width for responsiveness */
+    max-width: 120%;
     margin: 0 auto; /* Center the board */
     display: flex;
     flex-direction: column; /* Ensure elements are stacked vertically */
@@ -315,7 +315,7 @@ footer {
 
   .message-board {
     content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
-    max-width: 140%; /* Ensure the image does not exceed the container width */
+    max-width: 170%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
 
 
