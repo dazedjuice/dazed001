@@ -169,9 +169,9 @@ footer {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   html, body {
-    overflow: visible;
-    overflow-x: visible;
-    overflow-y: visible;
+
+    overflow-x: hidden;
+    overflow-y:hidden;
     height: 100%; /* Ensure full height */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
@@ -242,35 +242,39 @@ footer {
   }
   .main{
     height: auto;
+    position: relative;
+    padding: 20px; /* Add padding inside main */
+    min-height: 100vh; /* Ensure content is within viewport */
+
   }
 
   .about-container {
     display: flex;
-    flex-direction: column-reverse; /* Moves About-text above About-me */
-    gap: 10px;
-    align-items: center; /* Centers content */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
     max-width: 100%;
-    max-height: 100%;
-    height: auto; /* Removes the fixed height */
-    width: auto; /* Removes the fixed width */
-    overflow: auto; /* Prevents content from overflowing */
+    
 }
 
 .about-me {
-    max-height: calc(80vh - 160px); /* Ensure the image does not exceed the viewport height minus header and footer */
-    width: 150px; /* Maintain aspect ratio */
-    width: 150px;
+
+    position: absolute;
+    bottom: -300px; /* Move half of the image out of view */
+    width: 180px;
     height: auto;
     object-fit: contain;
-    position: static; /* Removes the relative position */
 }
 
-.about-text{
-  max-width: 100%; /* Ensure the image does not exceed the container width */
-  height: auto; /* Maintain aspect ratio */
-  width: auto; /* Maintain aspect ratio */
-  max-height: auto; /* Removes the max-height */
-  position: static; /* Removes the relative position */
+.about-text {
+  width: 110%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 80px; /* Adds space between text and image */
+
 }
 
 footer {
