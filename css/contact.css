@@ -375,6 +375,7 @@ footer {
     width: 65vw !important;  /* Make the message board 65% of the viewport width */
     max-height: 60vh !important; /* Limit the image height to 60% of the screen height */
     object-fit: contain; /* Keep the aspect ratio and fit the image */
+    margin-bottom: 0; /* Ensure no extra space below the message board */
   }
 
   header {
@@ -383,14 +384,14 @@ footer {
   }
 }
 footer {
-  position: relative;
+  position: fixed;  /* Keep footer fixed at the bottom */
+  bottom: 0;  /* Ensure it stays at the bottom of the screen */
   width: 100%;
   text-align: center;
   color: #90ee90;
-  padding-bottom: 10px;
   padding: 20px;
-  margin-top: auto;
   background: transparent;
+
 
 
 }
