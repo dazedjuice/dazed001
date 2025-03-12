@@ -370,10 +370,9 @@ footer {
 
 /* This targets iOS devices specifically */
 @supports (-webkit-touch-callout: none) {
-  /* Make the message board bigger on iPhones */
   .message-board {
-    width: 85vw !important;  /* Make the message board 85% of the screen width */
-    max-height: 60vh !important; /* Make the message board 60% of the screen height */
+    width: 65vw !important;  /* Make the message board 65% of the viewport width */
+    max-height: 60vh !important; /* Limit the image height to 60% of the screen height */
     object-fit: contain; /* Keep the aspect ratio and fit the image */
   }
 }
