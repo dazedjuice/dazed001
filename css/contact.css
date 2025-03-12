@@ -314,12 +314,13 @@ footer {
 
   .message-board {
     content: url("../imagescontact/boardmobile.gif");
-    max-width: 100%; /* Ensures it scales to fit the container */
-    width: 100%; /* Ensures full width scaling */
+    max-width: 100%; /* Ensures the image scales properly */
+    width: 100%;
     max-height: calc(80vh - 180px);
     height: auto;
     display: block;
-    margin: 0 auto; /* Keeps the image centered */
+    margin: 0 auto;
+    object-fit: contain; /* Maintain aspect ratio without stretching */
     
   }
 
