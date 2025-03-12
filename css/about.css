@@ -266,10 +266,11 @@ footer {
     width: 180px;
     height: auto;
     object-fit: contain;
+    
 }
 
 .about-text {
-  width: 110%;
+  width: 120%;
   height: auto;
   display: block;
   object-fit: contain;
