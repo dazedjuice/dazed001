@@ -312,8 +312,8 @@ footer {
 
   .message-board {
     position: relative; /* Ensure the container is positioned relative */
-    width: 90%; /* Adjusted width for responsiveness */
-    max-width: 90%;
+    width: 70%; /* Adjusted width for responsiveness */
+    max-width: 70%;
     margin: 0 auto; /* Center the board */
     display: flex;
     flex-direction: column; /* Ensure elements are stacked vertically */
