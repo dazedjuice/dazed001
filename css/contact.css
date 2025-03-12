@@ -313,11 +313,13 @@ footer {
   }
 
   .message-board {
-    content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
-    max-width: 140%; /* Ensure the image does not exceed the container width */
-    max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
-
-    height: auto; /* Maintain aspect ratio */
+    content: url("../imagescontact/boardmobile.gif");
+    max-width: 100%; /* Ensures it scales to fit the container */
+    width: 100%; /* Ensures full width scaling */
+    max-height: calc(80vh - 180px);
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Keeps the image centered */
     
   }
 
