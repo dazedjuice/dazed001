@@ -315,10 +315,11 @@ footer {
 
   .message-board {
     content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
-    max-width: 200%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
-
+    width: 150%; /* Or set to a custom width, e.g., 150% */
     height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Keeps image from stretching */
+    
     
   }
 
