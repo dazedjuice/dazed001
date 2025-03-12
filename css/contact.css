@@ -374,16 +374,9 @@ footer {
 
 
   .message-board {
-
-      width: 65vw !important;  /* Keep the size as you want */
-      max-height: 60vh !important; /* Limit the image height */
-      object-fit: contain; /* Maintain aspect ratio */
-      margin: 0 auto;  /* Horizontally center */
-      display: block;  /* Ensure it acts as a block element */
-      position: absolute; /* Position absolute to center vertically */
-      top: 50%;  /* Move it down */
-      left: 50%;  /* Move it to the left */
-      transform: translate(-50%, -50%);  /* Center it exactly */
+    width: 65vw !important;  /* Keep the size as you want */
+    max-height: 60vh !important; /* Limit the image height */
+    object-fit: contain; /* Ensure the aspect ratio is maintained */
   }
   header {
     margin-top: 22px;  /* Move the header down */
