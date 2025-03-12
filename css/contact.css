@@ -403,6 +403,8 @@ footer {
 
 }
 
-
+.ios-device {
+  border: 5px solid red; /* Debugging: Highlight the body to confirm iOS detection */
+}
 
 
