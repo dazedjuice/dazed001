@@ -371,20 +371,22 @@ footer {
 
 /* This targets iOS devices specifically */
 @supports (-webkit-touch-callout: none) {
-
-
   .message-board-container {
     display: flex;
-    justify-content: center; /* Horizontally centers */
-    align-items: center; /* Vertically centers */
-    height: 100vh; /* Full viewport height */
-  }
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 0; /* To avoid pushing footer */
+}
 
-  .message-board {
-    width: 65vw;  /* Adjust the width */
-    max-height: 60vh; /* Adjust the max height */
-    object-fit: contain; 
-  }
+.message-board {
+    width: 65vw;  /* Adjust width as needed */
+    max-height: 60vh;
+    object-fit: contain;
+}
+
   header {
     margin-top: 22px;  /* Move the header down */
     padding-top: 22px; /* Optional: Adds padding inside the header */
@@ -404,4 +406,7 @@ footer {
 
 }
 
+
+
 }
+
