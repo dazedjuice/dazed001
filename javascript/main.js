@@ -127,6 +127,5 @@ Draggable.create(cat, {
 });
 if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
   document.body.classList.add('ios-device');
-
 }
 });

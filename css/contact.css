@@ -370,23 +370,24 @@ footer {
 }
 
 /* This targets iOS devices specifically */
-.ios-device .message-board-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: -90px; /* Move the board up on iOS only */
-  margin-bottom: 0;
+@media only screen and (max-width: 768px) and (-webkit-device-pixel-ratio: 2) {
+  .message-board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -90px; /* Adjust the value to move the board up */
+    margin-bottom: 0;
 }
 
-.ios-device .message-board {
-  width: 65vw;  /* Adjust width as needed */
-  max-height: 60vh;
-  object-fit: contain;
+.message-board {
+    width: 65vw;  /* Adjust width as needed */
+    max-height: 60vh;
+    object-fit: contain;
 }
 
  
-
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -403,5 +404,5 @@ footer {
 
 
 
-
 }
+
