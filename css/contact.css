@@ -369,40 +369,4 @@ footer {
 
 }
 
-/* This targets iOS devices specifically */
-@supports (-webkit-touch-callout: none) {
-  .message-board-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
-    margin-bottom: 0;
 }
-
-.message-board {
-    width: 65vw;  /* Adjust width as needed */
-    max-height: 60vh;
-    object-fit: contain;
-}
-
- 
-}
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #90ee90;
-  padding: 20px;
-  background: transparent;
-  z-index: 998;  /* Ensure footer stays on top */
-
-
-
-}
-
-
-
-}
-
