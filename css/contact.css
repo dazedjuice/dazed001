@@ -236,9 +236,6 @@ footer {
 
   header {
     justify-content: space-between; /* Space between logo and buttons */
-    position: sticky; /* Keeps the header at the top */
-    top: 0; /* Ensures the header stays at the top */
-    z-index: 9999; /* Ensures it's above other elements */
   }
   
   #logogif {
@@ -302,28 +299,20 @@ footer {
   }
 
   .message-board-container {
-    position: relative; /* Ensure the container is positioned relative */
-    width: 100%; /* Adjusted width for responsiveness */
-    max-width: 100%;
-    margin: 0 auto; /* Center the board */
-    display: flex;
-    flex-direction: column; /* Ensure elements are stacked vertically */
-    justify-content: center;
-    align-items: center;
-    height: auto; /* Ensure the container height is auto */
-  
+    content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
+    max-width: 140%; /* Ensure the image does not exceed the container width */
+    max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
+    height: auto; /* Maintain aspect ratio */
+
 
   }
 
   .message-board {
-    content: url("../imagescontact/boardmobile.gif");
-    max-width: 100%; /* Ensures the image scales properly */
-    width: 100%;
-    max-height: calc(80vh - 180px);
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain; /* Maintain aspect ratio without stretching */
+    content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
+    max-width: 140%; /* Ensure the image does not exceed the container width */
+    max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
+
+    height: auto; /* Maintain aspect ratio */
     
   }
 
