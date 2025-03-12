@@ -235,8 +235,9 @@ footer {
   }
 
   header {
-    margin top: 20px;
     justify-content: space-between; /* Space between logo and buttons */
+   
+    
   }
   
   #logogif {
@@ -375,6 +376,11 @@ footer {
     width: 65vw !important;  /* Make the message board 65% of the viewport width */
     max-height: 60vh !important; /* Limit the image height to 60% of the screen height */
     object-fit: contain; /* Keep the aspect ratio and fit the image */
+  }
+
+  header {
+    margin-top: 20px;  /* Move the header down */
+    padding-top: 20px; /* Optional: Adds padding inside the header */
   }
 }
 }
