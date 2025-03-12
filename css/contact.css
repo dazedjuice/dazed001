@@ -371,7 +371,7 @@ footer {
 
 /* This targets iOS devices specifically */
 @supports (-webkit-touch-callout: none) {
-  .message-board-container {
+  .ios-device .message-board-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,7 +380,7 @@ footer {
     margin-bottom: 0;
 }
 
-.message-board {
+.ios-device .message-board {
     width: 65vw;  /* Adjust width as needed */
     max-height: 60vh;
     object-fit: contain;
