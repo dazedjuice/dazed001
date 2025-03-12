@@ -379,8 +379,8 @@ footer {
   }
 
   header {
-    margin-top: 20px;  /* Move the header down */
-    padding-top: 20px; /* Optional: Adds padding inside the header */
+    margin-top: 25px;  /* Move the header down */
+    padding-top: 25px; /* Optional: Adds padding inside the header */
   }
 }
 }
