@@ -371,13 +371,19 @@ footer {
 
 /* This targets iOS devices specifically */
 @supports (-webkit-touch-callout: none) {
-  .message-board {
-    width: 65vw !important;  /* Make the message board 65% of the viewport width */
-    max-height: 60vh !important; /* Limit the image height to 60% of the screen height */
-    object-fit: contain; /* Keep the aspect ratio and fit the image */
-    margin-bottom: 0; /* Ensure no extra space below the message board */
+  .message-board-container {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;  /* Vertically center */
+    height: 100vh;  /* Full viewport height */
+    width: 100%;  /* Full width */
   }
 
+  .message-board {
+    width: 65vw !important;  /* Keep the size as you want */
+    max-height: 60vh !important; /* Limit the image height */
+    object-fit: contain; /* Ensure the aspect ratio is maintained */
+  }
   header {
     margin-top: 22px;  /* Move the header down */
     padding-top: 22px; /* Optional: Adds padding inside the header */
