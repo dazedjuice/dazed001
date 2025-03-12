@@ -373,15 +373,17 @@ footer {
 @supports (-webkit-touch-callout: none) {
 
 
-  .message-board {
-    width: 65vw !important;
-    max-height: 60vh !important;
-    object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;  /* This will center the image horizontally */
-    object-fit: contain;
-    display: block;  /* Ensures the image behaves as a block element */
+  .message-board-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center; /* Vertically centers */
+    height: 100vh; /* Full viewport height */
+  }
 
+  .message-board {
+    width: 65vw;  /* Adjust the width */
+    max-height: 60vh; /* Adjust the max height */
+    object-fit: contain; 
   }
   header {
     margin-top: 22px;  /* Move the header down */
