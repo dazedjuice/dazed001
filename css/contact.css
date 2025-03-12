@@ -235,6 +235,7 @@ footer {
   }
 
   header {
+    position: fixed; /* Keeps it fixed at the top */
     justify-content: space-between; /* Space between logo and buttons */
   }
   
