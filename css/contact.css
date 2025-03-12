@@ -224,7 +224,7 @@ footer {
 }
 
 /* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) and (max-device-width: 1024px) {
   html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: hidden; /* Prevent vertical scrolling */
@@ -319,6 +319,8 @@ footer {
     width: 100%; /* Adjusted width */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Maintain aspect ratio and fit within the container */
+    padding-bottom: 90px; /* Adjust the padding for Android */
+    
     
   }
   
@@ -343,7 +345,7 @@ footer {
   }
 
   .instagram {
-    top: 65%; /* Adjust top position */
+    top: 60%; /* Adjust top position */
     left: 30%; /* Keep it centered */
     transform: translateX(-50%); /* Center it properly */
     width: 80px; /* Increase width */
