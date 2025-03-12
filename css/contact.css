@@ -376,7 +376,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: -50px; /* Adjust the value to move the board up */
+    margin-top: -70px; /* Adjust the value to move the board up */
     margin-bottom: 0;
 }
 
