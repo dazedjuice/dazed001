@@ -315,7 +315,7 @@ footer {
 
   .message-board {
     content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
-    max-width: 140%; /* Ensure the image does not exceed the container width */
+    max-width: 200%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
 
     height: auto; /* Maintain aspect ratio */
