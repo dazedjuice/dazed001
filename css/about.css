@@ -247,7 +247,7 @@ footer {
     max-height: 100%;
     height: auto; /* Removes the fixed height */
     width: auto; /* Removes the fixed width */
-    overflow: hidden; /* Prevents content from overflowing */
+    overflow: auto; /* Prevents content from overflowing */
 }
 
 .about-me {
