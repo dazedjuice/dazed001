@@ -314,10 +314,11 @@ footer {
   }
 
   .message-board {
-    content: url("../imagescontact/boardmobile.gif");
-    width: 300px; /* Set a fixed width in pixels */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensures image scales without stretching */
+    background-image: url("../imagescontact/boardmobile.gif"); /* Set the background image */
+    background-size: cover; /* Scale the image to cover the container */
+    background-position: center; /* Center the image */
+    width: 100%; /* Set the width of the container */
+    height: auto; /* Adjust height based on width */
     
   }
 
