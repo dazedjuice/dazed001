@@ -384,13 +384,14 @@ footer {
   }
 }
 footer {
-  position: fixed;  /* Keep footer fixed at the bottom */
-  bottom: 0;  /* Ensure it stays at the bottom of the screen */
+  position: fixed;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: #90ee90;
   padding: 20px;
   background: transparent;
+  z-index: 998;  /* Ensure footer stays on top */
 
 
 
