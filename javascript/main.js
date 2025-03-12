@@ -125,7 +125,8 @@ Draggable.create(cat, {
   bounds: "body", // Optional: Restrict dragging within the body
   inertia: true // Optional: Add inertia to the dragging
 });
-if (/iPhone|iPad|iPod/.test(navigator.platform)) {
+if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
   document.body.classList.add('ios-device');
+
 }
 });

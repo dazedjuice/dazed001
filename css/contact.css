@@ -370,20 +370,19 @@ footer {
 }
 
 /* This targets iOS devices specifically */
-}
-  .ios-device .message-board-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: -90px; /* Move the board up on iOS only */
-    margin-bottom: 0;
+.ios-device .message-board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -90px; /* Move the board up on iOS only */
+  margin-bottom: 0;
 }
 
 .ios-device .message-board {
-    width: 65vw;  /* Adjust width as needed */
-    max-height: 60vh;
-    object-fit: contain;
+  width: 65vw;  /* Adjust width as needed */
+  max-height: 60vh;
+  object-fit: contain;
 }
 
  
@@ -405,4 +404,4 @@ footer {
 
 
 
-
+}
