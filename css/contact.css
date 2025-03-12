@@ -236,6 +236,9 @@ footer {
 
   header {
     justify-content: space-between; /* Space between logo and buttons */
+    position: sticky; /* Keeps the header at the top */
+    top: 0; /* Ensures the header stays at the top */
+    z-index: 9999; /* Ensures it's above other elements */
   }
   
   #logogif {
@@ -308,8 +311,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: auto; /* Ensure the container height is auto */
-    padding-top: 10px; /* Adjust this value to match the header's height */
-    margin-top: 10px; /* Slight margin to prevent overlap */
+  
 
   }
 
@@ -340,7 +342,7 @@ footer {
   }
 
   .email {
-    top: 10%; /* Move higher up */
+    top: 7%; /* Move higher up */
     left: 25%;
     width: 100px; /* Increase width */
     height: 80px; /* Increase height */
