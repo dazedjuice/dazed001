@@ -370,7 +370,7 @@ footer {
 }
 
 /* This targets iOS devices specifically */
-@supports (-webkit-touch-callout: none) {
+}
   .ios-device .message-board-container {
     display: flex;
     justify-content: center;
@@ -387,7 +387,7 @@ footer {
 }
 
  
-}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -404,5 +404,5 @@ footer {
 
 
 
-}
+
 
