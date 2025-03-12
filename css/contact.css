@@ -224,7 +224,7 @@ footer {
 }
 
 /* Media Queries for Mobile Devices */
-@media only screen and (max-width: 768px) and (max-device-width: 1024px) {
+@media (max-width: 768px) {
   html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: hidden; /* Prevent vertical scrolling */
@@ -319,7 +319,6 @@ footer {
     width: 100%; /* Adjusted width */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Maintain aspect ratio and fit within the container */
-    padding-bottom: 90px; /* Adjust the padding for Android */
     
     
   }
@@ -345,7 +344,7 @@ footer {
   }
 
   .instagram {
-    top: 60%; /* Adjust top position */
+    top: 65%; /* Adjust top position */
     left: 30%; /* Keep it centered */
     transform: translateX(-50%); /* Center it properly */
     width: 80px; /* Increase width */
@@ -372,9 +371,8 @@ footer {
 }
 
 /* This targets iOS devices specifically */
-@media screen and (max-width: 768px) and (pointer: coarse) {
-  @supports (-webkit-touch-callout: none) {
-  .message-board-container {
+
+  .ios-device .message-board-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,7 +381,7 @@ footer {
     margin-bottom: 0;
 }
 
-.message-board {
+.ios-device .message-board {
     width: 65vw;  /* Adjust width as needed */
     max-height: 60vh;
     object-fit: contain;
@@ -391,7 +389,7 @@ footer {
 
  
 }
-footer {
+.ios-device .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -407,5 +405,4 @@ footer {
 
 
 
-}
-}
+

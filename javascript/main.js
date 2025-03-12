@@ -125,7 +125,15 @@ Draggable.create(cat, {
   bounds: "body", // Optional: Restrict dragging within the body
   inertia: true // Optional: Add inertia to the dragging
 });
-if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+// Detect if the user is on an iOS device
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+if (isIOS) {
+  // Add iOS-specific code here
+  console.log("This is an iOS device.");
+  // Example: Add a class to the body for iOS-specific styling
   document.body.classList.add('ios-device');
+} else {
+  console.log("This is not an iOS device.");
 }
 });
