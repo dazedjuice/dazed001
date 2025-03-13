@@ -237,7 +237,6 @@ footer {
   header {
     justify-content: space-between; /* Space between logo and buttons */
    
-    
   }
   
   #logogif {
@@ -300,48 +299,26 @@ footer {
     display: none; /* Hide hover image on mobile */
   }
 
-/* Adjust for mobile devices (screens with a width of 768px or less) */
-@media (max-width: 768px) {
-  /* Resize the message board for mobile */
-    /* Resize the message board for mobile */
-    .message-board {
-      width: 100%; /* Full width of the container */
-      height: 70vh; /* Fixed height for the message board */
-      max-width: none; /* Ensure it doesn't exceed the container width */
-      object-fit: contain; /* Maintain aspect ratio */
-    }
-  
-    /* Ensure the header and footer don't interfere with the board */
-    header {
-      height: auto; /* Let the header size adjust naturally */
-    }
-  
-    footer {
-      height: auto; /* Let the footer size adjust naturally */
-    }
-  
-  /* Ensure the header and footer don't interfere with the board */
-  header {
-    height: 80px; /* Fixed height for the header on mobile */
+  .message-board-container {
+    position: relative; /* Ensure the container is positioned relative */
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 100%;
+    margin: 0 auto; /* Center the board */
+    display: flex;
+    flex-direction: column; /* Ensure elements are stacked vertically */
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ensure the container height is auto */
   }
 
-  footer {
-    height: 100px; /* Fixed height for the footer on mobile */
-  }
-
-  /* Optional: Debugging with borders */
   .message-board {
-    border: 2px solid orange; /* Debugging: Highlight message board */
+    content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
+    max-width: 140%; /* Ensure the image does not exceed the container width */
+    max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
+    height: auto; /* Maintain aspect ratio */
+    
   }
 
-  header {
-    border: 2px solid red; /* Debugging: Highlight header */
-  }
-
-  footer {
-    border: 2px solid blue; /* Debugging: Highlight footer */
-  }
-}
   
   .arrow-names {
     display: none; /* Hide arrow names on mobile */
@@ -389,11 +366,6 @@ footer {
 
 
 }
-
-
-
- 
-
 }
 
 
