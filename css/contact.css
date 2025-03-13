@@ -236,6 +236,7 @@ footer {
 
   header {
     justify-content: space-between; /* Space between logo and buttons */
+    position: fixed;
    
   }
   
@@ -302,6 +303,7 @@ footer {
   .message-board-container {
     width: 100%;
     max-width: 100%;
+    
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -310,7 +312,7 @@ footer {
     height: auto;
     padding-bottom: 10px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -320,7 +322,7 @@ footer {
     max-width: 140%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
     height: auto; /* Maintain aspect ratio */
-    max-height: 50vh; /* Prevent it from taking too much space */
+    max-height: 60vh; /* Prevent it from taking too much space */
     
   }
 
