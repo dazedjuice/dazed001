@@ -300,7 +300,6 @@ footer {
   }
 
   .message-board-container {
-    position: relative; /* Ensure the container is positioned relative */
     width: 110%; /* Adjusted width for responsiveness */
     max-width:100%;
     margin: 0 auto; /* Center the board */
@@ -310,6 +309,16 @@ footer {
     align-items: center;
     height: auto; /* Ensure the container height is auto */
     padding-bottom: 10px; /* Add space if needed */
+    position: absolute;
+    top: 50%; /* Move it towards the center */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it properly */
+    width: 100%;
+    position: absolute;
+    top: 50%; /* Move it towards the center */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it properly */
+    width: 100%;
   }
 
   .message-board {
@@ -317,7 +326,6 @@ footer {
     max-width: 140%; /* Ensure the image does not exceed the container width */
     max-height: calc(70vh - 180px); /* Ensure the image does not exceed the viewport height minus header and footer */
     height: auto; /* Maintain aspect ratio */
-    
     max-height: 50vh; /* Prevent it from taking too much space */
     
   }
