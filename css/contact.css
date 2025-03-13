@@ -300,26 +300,20 @@ footer {
   }
 
   .message-board-container {
-    width: 110%; /* Adjusted width for responsiveness */
-    max-width:100%;
-    margin: 0 auto; /* Center the board */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Ensure elements are stacked vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto; /* Ensure the container height is auto */
-    padding-bottom: 10px; /* Add space if needed */
+    height: auto;
+    padding-bottom: 10px;
     position: absolute;
-    top: 50%; /* Move it towards the center */
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center it properly */
-    width: 100%;
-    position: absolute;
-    top: 50%; /* Move it towards the center */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center it properly */
-    width: 100%;
-  }
+    transform: translate(-50%, -50%);
+}
 
   .message-board {
     content: url("../imagescontact/boardmobile.gif"); /* Use the mobile version of the message board */
