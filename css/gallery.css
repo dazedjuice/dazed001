@@ -201,6 +201,10 @@ html, body {
     min-height: -webkit-fill-available; /* Fix for iOS */
     background-color: #f0f0f0;
 }
+#logogif {
+  max-height: 50px; /* Adjusted logo size */
+  margin-right: auto;
+}
 
 .gif-grid {
     display: grid;
@@ -215,6 +219,7 @@ html, body {
     width: 100%; /* Make GIFs fill their grid cells */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: Add rounded corners */
+    -webkit-transform: translateZ(0); /* Force hardware acceleration */
 }
   
     header {
@@ -288,7 +293,7 @@ html, body {
       justify-content: flex-start; /* Push content down */
       align-items: center;
       min-height: 100vh; /* Ensure it takes full height */
-      padding-top: 60px; /* Adjust spacing */
+      padding-top: 5px; /* Adjust spacing */
   }
   }
   
