@@ -169,7 +169,7 @@ html, body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-top: 30px; /* Adds space between vertical and horizontal GIFs */
+    margin-top: 10px; /* Adds space between vertical and horizontal GIFs */
   }
   
   /* Horizontal GIF styling */
@@ -199,6 +199,15 @@ html, body {
     
     
   }
+/* Hide the scrollbar for Webkit browsers (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide the scrollbar for Firefox */
+body {
+  scrollbar-width: none; /* Firefox */
+}
 
 
 
@@ -221,14 +230,14 @@ html, body {
     margin-right: auto;
   }
 
-.gif-grid {
+  .gif-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 100%; /* Full width */
-    max-width: none; /* Remove max-width constraint */
-    padding: 0; /* Remove padding if it's limiting the size */
-}
+    grid-template-columns: 1fr; /* 1 column, so GIFs stack vertically */
+    gap: 10px; /* Spacing between GIFs */
+    width: 100%; /* Full width of the container */
+    max-width: none; /* Remove any max-width constraint */
+    padding: 0; /* Remove padding if it limits the size */
+  }
 
 .gif-grid img {
     width: 100%; /* Make GIFs fill their grid cells */
