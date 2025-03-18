@@ -1,11 +1,24 @@
 {
-    "rewrites": [
-      {
-        "source": "/:path*.html",
-        "destination": "/:path*"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/gallery",
+      "destination": "/gallery.html"
+    },
+    {
+      "source": "/shop",
+      "destination": "/shop.html"
+    }
+  ]
+}
+
   
   
   
