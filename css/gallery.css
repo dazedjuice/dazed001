@@ -160,11 +160,13 @@ html, body {
     margin-top: 0px;
   }
   
-  .gif.gallery img {
+  .gif.gallery video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
   }
+  
   .horizontal-gifs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -199,6 +201,7 @@ html, body {
     
     
   }
+
 /* Hide the scrollbar for Webkit browsers (Chrome, Safari, Edge, Opera) */
 ::-webkit-scrollbar {
   display: none;
@@ -208,7 +211,6 @@ html, body {
 body {
   scrollbar-width: none; /* Firefox */
 }
-
 
 
   /* Media Queries for Mobile Devices */

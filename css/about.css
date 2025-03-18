@@ -244,6 +244,8 @@ footer {
     height: auto;
     position: relative;
     padding: 20px; /* Add padding inside main */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
     min-height: 100vh; /* Ensure content is within viewport */
 
   }
