@@ -1,0 +1,22 @@
+{
+    "rewrites": [
+      {
+        "source": "/contact",
+        "destination": "/contact.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/about.html"
+      },
+      {
+        "source": "/homepage",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/gallery/",
+        "destination": "/gallery/.html"
+      }
+    ]
+  }
+  
+  
