@@ -189,14 +189,31 @@ html, body {
 
   /* Media Queries for Mobile Devices */
   @media (max-width: 768px) {
-    html, body {
+ 
+    
+html, body {
     margin: 0;
     padding: 0;
-    width: 100%; /* Use 100% instead of 100vw to prevent extra width issues */
-    height: 100%;
-    overflow-x: hidden !important; /* Force-disable horizontal scrolling */
-    }
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    background-color: #f0f0f0;
+}
+
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 10px; /* Space between GIFs */
+    width: 90%; /* Adjust as needed */
+    max-width: 600px; /* Limit width for larger screens */
+}
+
+.gif-grid img {
+    width: 100%; /* Make GIFs fill their grid cells */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
   
     header {
       justify-content: space-between; /* Space between logo and buttons */
