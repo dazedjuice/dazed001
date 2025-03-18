@@ -201,10 +201,10 @@ html, body {
     min-height: -webkit-fill-available; /* Fix for iOS */
     background-color: #f0f0f0;
 }
-#logogif {
-  max-height: 50px; /* Adjusted logo size */
-  margin-right: auto;
-}
+  #logogif {
+    max-height: 50px; /* Adjusted logo size */
+    margin-right: auto;
+  }
 
 .gif-grid {
     display: grid;
