@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh; /* Allow body to grow */
     background-color: aliceblue;
     background-image: url("../images/background.png");
     background-size: cover; /* Ensure the background image covers the entire area */
@@ -12,7 +12,7 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
+    overflow-y: auto; /* Prevent vertical scrolling */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
     
@@ -87,14 +87,8 @@ html, body {
     opacity: 0; /* Hide original image on hover */
   }
   
-  main {
-    flex: 1; /* Takes up remaining space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 0; /* Allow the content to overflow */
-  }
+ 
+  
 
   /* Footer styling */
   footer {
@@ -102,6 +96,8 @@ html, body {
     text-align: center;
     color: #90ee90;
     padding: 20px;
+    position: static; /* Let it flow normally */
+    background: transparent;
   }
   
   /* Overlay Menu Styling */
@@ -170,12 +166,23 @@ html, body {
     object-fit: cover;
   }
   
-  main {
-    overflow-y: auto;
+  main { 
 
-    display: block;
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 0; /* Allow the content to overflow */
+
+     overflow-y: auto;
+    
+ 
     height: auto;
     flex-direction: column;
+     
+    
+    
   }
 
 
@@ -183,11 +190,11 @@ html, body {
   /* Media Queries for Mobile Devices */
   @media (max-width: 768px) {
     html, body {
-      overflow-x: hidden; /* Prevent horizontal scrolling */
-      overflow-y: hidden; /* Prevent vertical scrolling */
-      height: 100%; /* Ensure full height */
-      padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
-      padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Use 100% instead of 100vw to prevent extra width issues */
+    height: 100%;
+    overflow-x: hidden !important; /* Force-disable horizontal scrolling */
     }
     
   
@@ -195,10 +202,13 @@ html, body {
       justify-content: space-between; /* Space between logo and buttons */
     }
 
-    .gif-gallery img {
-      width: calc(50% - 10px); /* 2 items per row on smaller screens */
-    
-  }
+    .gif.gallery {
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+  
+
+
     .hamburger {
       display: block; /* Show hamburger on mobile */
       position: absolute;
@@ -253,6 +263,13 @@ html, body {
     .overlay-content a .hover-img {
       display: none; /* Hide hover image on mobile */
     }
-
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Push content down */
+      align-items: center;
+      min-height: 100vh; /* Ensure it takes full height */
+      padding-top: 60px; /* Adjust spacing */
+  }
   }
   
