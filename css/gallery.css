@@ -197,16 +197,18 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* Fix for iOS */
     background-color: #f0f0f0;
 }
 
 .gif-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-    gap: 10px; /* Space between GIFs */
-    width: 90%; /* Adjust as needed */
-    max-width: 600px; /* Limit width for larger screens */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%; /* Full width */
+    max-width: none; /* Remove max-width constraint */
+    padding: 0; /* Remove padding if it's limiting the size */
 }
 
 .gif-grid img {
