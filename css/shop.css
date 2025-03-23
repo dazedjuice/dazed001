@@ -94,17 +94,23 @@ html, body {
     padding: 20px;
     min-height: 0; /* Allow the content to overflow */
   }
-  
-  .about-container{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-  }
-  
-  
+
+/* Style for the coming soon image */
+.coming-soon img {
+  width: 500px; /* Make the GIF smaller (adjust this value as needed) */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image scales down on smaller screens */
+  display: block; /* Remove any unwanted space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Optional: Center the div as well */
+.coming-soon {
+  text-align: center; /* Center the div contents */
+  padding: 20px; /* Optional: add some padding for spacing */
+}
+
+
   /* Footer styling */
   footer {
     width: 100%;

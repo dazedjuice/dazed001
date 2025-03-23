@@ -140,15 +140,19 @@ main {
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevent scrolling within the overlay */
-  opacity: 0; /* Start hidden */
-  transform: scale(0.8); /* Start smaller */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for overlay */
+  opacity: 0; /* Start fully transparent */
+  transform: scale(0.5); /* Start smaller */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+
 }
 
 .overlay-menu.show {
   display: flex; /* Show overlay menu when active */
   opacity: 1; /* Fade in */
   transform: scale(1); /* Scale to full size */
+  opacity: 1; /* Fade in */
+  position: fixed;
+  z-index: 1000; /* Ensure the overlay is above everything else */
 }
 
 .overlay-content {
@@ -161,7 +165,7 @@ main {
 }
 
 .overlay-content a {
-  color: black; /* Change text color to black */
+ 
   text-decoration: none;
   font-size: 24px;
   width: 120px; /* Adjust the width of the buttons in the overlay */
@@ -260,40 +264,41 @@ footer {
   display: none; /* Hide hover image on mobile */
 }
 
-  .overlay-menu {
-    display: none; /* Hide overlay by default */
-  }
+.overlay-menu {
+  display: none; /* Hide overlay by default */
+}
 
-  .overlay-menu.show {
-    display: flex; /* Show overlay menu when active */
-    opacity: 1; /* Fade in */
-    transform: scale(1); /* Scale to full size */
-    position: fixed;
-    z-index: 1000; /* Ensure the overlay is above everything else */
-   
-  }
+.overlay-menu.show {
+  display: flex; /* Show overlay when .show class is added */
+  opacity: 1;
+  transform: scale(1);
+  position: fixed;
+  z-index: 1000;
+}
 
-  .overlay-content {
-    justify-content: center; /* Center the buttons vertically */
-    height: 100%; /* Ensure the overlay content takes full height */
-    z-index: 1001; /* Ensure it is above the overlay menu */
-  }
+.overlay-content {
+  justify-content: center;
+  height: 100%;
+  z-index: 1001;
+}
 
-  .overlay-content a {
-    width: 120px; /* Adjust the width of the buttons in the overlay */
-    height: 120px; /* Adjust the height of the buttons in the overlay */
-    display: flex; /* Ensure the link is a flex container */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
+.overlay-content a {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
 
-  .overlay-content a img {
-    width: 100%; /* Ensure the image covers the link area */
-    height: 100%; /* Ensure the image covers the link area */
-    object-fit: contain; /* Ensure the image fits within the area */
-  }
+.overlay-content a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
 
   .button-container a .hover-img,
   .overlay-content a .hover-img {
