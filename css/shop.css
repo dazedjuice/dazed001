@@ -255,16 +255,15 @@ html, body {
   
     }
   
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      position: relative;
-      padding-top: 20px;
-      max-width: 100%;
-      
-  }
+    .coming-soon img {
+      width: 100%; /* Adjust this value as needed, this will make the GIF take 80% of the screen width */
+      max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    }
+    
+    /* Center the container on smaller screens */
+    .coming-soon {
+      padding: 10px; /* Reduce padding for mobile */
+    }
   
  
   
