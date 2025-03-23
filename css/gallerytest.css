@@ -314,16 +314,7 @@ html, body {
     max-width: 300px; /* Ensure the images are not too big on mobile */
     object-fit: cover; /* Keep the object fitting nicely within the area */
 }
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align the content to the top */
-  align-items: center;
-  min-height: 0; /* Allow the content to take up only the space it needs */
-  padding-top: 5px; /* Adjust spacing */
-  padding-bottom: 20px; /* Add bottom padding to make space for content */
-  height: auto; /* Ensure it only takes up the necessary height */
-}
+
 .image-description {
     font-size: 14px; /* Smaller font size for mobile */
     color: #333;
