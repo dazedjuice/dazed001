@@ -60,8 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('TikTok link clicked');
       });
     }
-  
-   
-    
+    const image = document.querySelector('img#backToTop');
+    image.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 
 });
