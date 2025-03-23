@@ -294,13 +294,32 @@ html, body {
     .overlay-content a .hover-img {
       display: none; /* Hide hover image on mobile */
     }
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* Push content down */
-      align-items: center;
-      min-height: 100vh; /* Ensure it takes full height */
-      padding-top: 5px; /* Adjust spacing */
-  }
-  }
+ 
+   /* Modify image container for mobile */
+   .image-container {
+    display: flex;
+    flex-direction: column; /* Stack the images vertically */
+    gap: 20px; /* Adjust the gap between images */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center;
+}
+
+.image-item {
+    text-align: center; /* Keep the description centered under the image */
+}
+
+.image {
+    width: 80%; /* Adjust the width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Ensure the images are not too big on mobile */
+    object-fit: cover; /* Keep the object fitting nicely within the area */
+}
+
+.image-description {
+    font-size: 14px; /* Smaller font size for mobile */
+    color: #333;
+    margin-top: 10px; /* Reduced space between the image and description */
+}
+}
+  
   
