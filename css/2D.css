@@ -144,23 +144,135 @@ html, body {
     object-fit: contain; /* Ensure the image fits within the area */
   }
 
-  
-  
-  .horizontal-gifs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 10px; /* Adds space between vertical and horizontal GIFs */
-  }
-  
-  /* Horizontal GIF styling */
-  .horizontal-gifs img {
+ 
 
+/* Parent container for all paintings */
+.paintings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px;
+    width: 80%; /* Adjust width */
+    height: auto;
+    margin: 0 auto; /* Center the grid */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Text container for the paintings */
+.text-container {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Space between text and the paintings */
+}
+
+/* Title styling for the paintings */
+.text-container h3 {
+    font-size: 22px; /* Title font size */
+    font-weight: bold;
+    color: #333; /* Title color */
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+/* Description text styling */
+.text-container p {
+    font-size: 16px; /* Description font size */
+    color: #666; /* Description color */
+    margin-bottom: 15px; /* Space between description and next image */
+    line-height: 1.5; /* Makes the text more readable */
+    padding: 0 20px; /* Adds padding for better spacing on the sides */
+}
+
+
+/* Individual painting container */
+.painting {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Maintain correct aspect ratio */
+    overflow: hidden; /* Prevents images from spilling out */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Static and hover images */
+.painting img {
     width: 100%;
     height: 100%;
+    display: block;
+    object-fit: contain; /* Ensures the entire image fits within the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Hover image settings */
+.painting .hover-img {
+    opacity: 0; /* Initially hidden */
+    
+}
+
+/* Show hover image on hover */
+.painting:hover .hover-img {
+    opacity: 1;
+}
+
+/* Hide static image on hover */
+.painting:hover .static-img {
+    opacity: 0;
+}
+
+
+
+
+ 
+
+ /* Main container for everything */
+.horizontal-gifs {
+    display: grid; /* Grid layout */
+    grid-template-columns: 1fr; /* Make sure the entire width is used */
+    gap: 20px; /* Space between text and GIFs */
+    margin-top: 20px;
+   
+}
+
+/* Text container */
+.text-container {
+    width: 100%;
+}
+
+/* Header styling */
+.text-container h2 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 15px; /* Space below the header */
+    padding: 0 20px; /* Optional: Adds padding for better spacing on the sides */
+    text-align: left;
+}
+
+/* Paragraph description styling */
+.text-container .image-description {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 5px; /* Space between description and GIFs */
+    line-height: 1; /* Makes the text more readable */
+    padding: 0 20px; /* Optional: Adds padding for better spacing on the sides */
+    text-align: left;
+}
+
+/* GIFs container (2x2 grid) */
+.gifs-container {
+    display: grid; /* Use grid layout for GIFs */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns for images */
+    gap: 20px; /* Space between images */
+    padding: 10px;
+}
+
+/* Horizontal GIF styling */
+.gifs-container img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-  }
-  
+}
+
   .sketchbook {
     display: flex;
     justify-content: center;
@@ -173,12 +285,8 @@ html, body {
     height: auto;
     object-fit: cover;
     
-    
 }
- 
 
-
-  
   
   main { 
 
@@ -248,12 +356,9 @@ html, body {
     margin-right: auto;
   }
 
- 
-  
     header {
       justify-content: space-between; /* Space between logo and buttons */
     }
-
 
     .sketchbook {
         display: flex;
@@ -267,25 +372,38 @@ html, body {
         height: auto;
         object-fit: cover;
         
-        
     }
      
   
     .horizontal-gifs {
-      display: flex;
-      flex-direction: column !important; /* Force stacking */
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      width: 100%;
-    }
-  
-    .horizontal-gifs img {
-      width: 100% !important; /* Full width */
-      max-width: 100%;
-      display: block;
+        display: flex !important;
+        flex-direction: column !important; /* Stack vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
     }
 
+    .gifs-container {
+        display: flex !important; /* Override grid */
+        flex-direction: column !important; /* Stack vertically */
+        align-items: center; /* Center images */
+    }
+
+    .horizontal-gifs img {
+        width: 100% !important;
+        max-width: 400px !important; /* Optional */
+        display: block;
+    }
+    .paintings {
+        grid-template-columns: 1fr !important; /* One column layout */
+        width: 100%; /* Make it full width */
+    }
+
+    .painting {
+        width: 80%; /* Adjust width for better spacing */
+        margin: 0 auto; /* Center the paintings */
+    }
     .hamburger {
       display: block; /* Show hamburger on mobile */
       position: absolute;

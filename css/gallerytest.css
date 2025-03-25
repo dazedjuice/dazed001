@@ -172,12 +172,12 @@ html, body {
    
 }
 
-/* Style for the descriptions */
-.image-description {
-    font-size: 16px;
-    color: #333;
-    margin-top: 15px; /* Space between the image and description */
+.image-item:hover .image-description {
+  color: #e3ff7f;
 }
+
+
+
 
 /* Hide the scrollbar for Webkit browsers (Chrome, Safari, Edge, Opera) */
 ::-webkit-scrollbar {
