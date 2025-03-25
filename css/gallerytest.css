@@ -297,6 +297,7 @@ html, body {
  
    /* Modify image container for mobile */
    .image-container {
+    width: 90%; /* Reduce width to fit smaller screens */
     display: flex;
     flex-direction: column; /* Stack the images vertically */
     gap: 20px; /* Adjust the gap between images */
