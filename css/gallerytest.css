@@ -288,10 +288,10 @@ header {
  
    /* Modify image container for mobile */
    .image-container {
-    width: 65%; /* Reduce width to fit smaller screens */
+    width: 70%; /* Reduce width to fit smaller screens */
     display: flex;
     flex-direction: column; /* Stack the images vertically */
-    gap: 20px; /* Adjust the gap between images */
+    gap: 0px; /* Adjust the gap between images */
     justify-content: center; /* Center the images horizontally */
     align-items: center;
 }
