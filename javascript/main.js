@@ -115,33 +115,43 @@ document.addEventListener('DOMContentLoaded', function() {
     catImage.addEventListener('mousedown', handleMouseDown);
     catImage.ondragstart = () => false;
   }
-// Assuming you have a reference to the cat element, e.g.,
-const cat = document.querySelector('.cat-image');
 
-// Initialize Draggable on the cat element
-Draggable.create(cat, {
-  type: "x,y", // Allow dragging in both x and y directions
-  edgeResistance: 0.65, // Optional: Add some resistance when dragging near the edges
-  bounds: "body", // Optional: Restrict dragging within the body
-  inertia: true // Optional: Add inertia to the dragging
-});
+  // Initialize Draggable on the cat element
+  const cat = document.querySelector('.cat-image');
+  if (cat) {
+    Draggable.create(cat, {
+      type: "x,y", // Allow dragging in both x and y directions
+      edgeResistance: 0.65, // Optional: Add some resistance when dragging near the edges
+      bounds: "body", // Optional: Restrict dragging within the body
+      inertia: true // Optional: Add inertia to the dragging
+    });
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Back to top button functionality
   const backToTopButton = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", function () {
+  if (backToTopButton) {
+    window.addEventListener("scroll", function () {
       if (window.scrollY > 300) {
-          backToTopButton.style.display = "block";
+        backToTopButton.style.display = "block";
       } else {
-          backToTopButton.style.display = "none";
+        backToTopButton.style.display = "none";
       }
-  });
+    });
 
-  backToTopButton.addEventListener("click", function () {
+    backToTopButton.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
+    });
+  }
 
-
-
+  // Check if the device is an iOS device
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    // Create a meta tag
+    var metaTag = document.createElement('meta');
+    // Set the name attribute to 'theme-color'
+    metaTag.setAttribute('name', 'theme-color');
+    // Set the content attribute to blue color
+    metaTag.setAttribute('content', '#2240e0');
+    // Append the meta tag to the document head
+    document.head.appendChild(metaTag);
+  }
 });
