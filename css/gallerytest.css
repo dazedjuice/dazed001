@@ -1,20 +1,18 @@
 /* General styles */
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    min-height: 100vh; /* Allow body to grow */
-    background-color: aliceblue;
-    background-image: url("../images/background.png");
-    background-size: cover; /* Ensure the background image covers the entire area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Prevent vertical scrolling */
-    padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
-    padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh; /* Ensure it covers the full viewport height */
+  background-color: aliceblue;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
     
   }
   
