@@ -231,7 +231,7 @@ footer {
   }
 
   header {
-    transform: translateY(-20px); /* Moves the header up */
+
     justify-content: space-between; /* Space between logo and buttons */
   }
 

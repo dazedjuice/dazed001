@@ -271,13 +271,13 @@ html, body {
 
   .gif.gallery {
     grid-template-columns: 1fr 1fr;
-    width: 100%;
+    width: 120%;
   }
 
 
   
     header {
-      transform: translateY(-20px); /* Moves the header up */
+      
       justify-content: space-between; /* Space between logo and buttons */
     }
 
