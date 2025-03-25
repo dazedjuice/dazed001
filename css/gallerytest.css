@@ -188,13 +188,18 @@ body {
 
 
 }
-  /* Footer styling */
-  footer {
-    color: #90ee90;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
+ /* Footer styling */
+footer {
+  width: 100%;
+  text-align: center; /* Center the text inside the footer */
+  color: #90ee90;
+  padding: 20px 0; /* Set uniform padding on top and bottom */
+  margin-top: auto; /* Push footer to the bottom */
+  background: transparent; /* Ensure footer has no background */
+  box-sizing: border-box; /* Include padding within the width */
+  padding-left: 20px;  /* Add consistent left padding */
+  padding-right: 20px; /* Add consistent right padding */
+}
 
 
   /* Media Queries for Mobile Devices */
@@ -294,7 +299,7 @@ html, body {
  
    /* Modify image container for mobile */
    .image-container {
-    width: 70%; /* Reduce width to fit smaller screens */
+    width: 65%; /* Reduce width to fit smaller screens */
     display: flex;
     flex-direction: column; /* Stack the images vertically */
     gap: 20px; /* Adjust the gap between images */
@@ -307,7 +312,7 @@ html, body {
 }
 
 .image {
-    width: 90%; /* Adjust the width for smaller screens */
+    width: 85%; /* Adjust the width for smaller screens */
     height: auto; /* Maintain aspect ratio */
     max-width: 300px; /* Ensure the images are not too big on mobile */
     object-fit: cover; /* Keep the object fitting nicely within the area */
@@ -318,6 +323,18 @@ html, body {
     color: #333;
     margin-top: 10px; /* Reduced space between the image and description */
 }
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #90ee90;
+  padding: 20px;
+  margin-top: auto;
+  background: transparent;
+
+
 }
+
+  }
   
   
