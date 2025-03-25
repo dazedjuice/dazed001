@@ -288,7 +288,7 @@ header {
  
    /* Modify image container for mobile */
    .image-container {
-    width: 70%; /* Reduce width to fit smaller screens */
+    width: 60%; /* Reduce width to fit smaller screens */
     display: flex;
     flex-direction: column; /* Stack the images vertically */
     gap: 0px; /* Adjust the gap between images */
@@ -301,7 +301,7 @@ header {
 }
 
 .image {
-    width: 85%; /* Adjust the width for smaller screens */
+    width: 80%; /* Adjust the width for smaller screens */
     height: auto; /* Maintain aspect ratio */
     max-width: 300px; /* Ensure the images are not too big on mobile */
     object-fit: cover; /* Keep the object fitting nicely within the area */
