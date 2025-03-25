@@ -262,7 +262,7 @@ html, body {
   .gif-gallery {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
     grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
-    gap: 10px; /* Slightly larger gap for mobile */
+    gap: 5px; /* Slightly larger gap for mobile */
   }
 
   .gif-gallery video {
