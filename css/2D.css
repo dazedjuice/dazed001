@@ -438,20 +438,18 @@ html, body {
     }
 
     .painting .tap-to-learn {
-        position: absolute; /* Position it on top of the painting */
-        top: -4%; /* Move the text higher (adjust this value as needed) */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center the text horizontally */
-        z-index: 10; /* Ensure it appears above the images */
-        font-size: 25px; /* Adjust the font size */
-        color: #ff8425; /* Adjust the text color */
-        text-align: center; /* Center the text */
-        font-family: 'Gaegu', cursive; /* Use the specified font */
-        padding: 5px 10px; /* Add padding around the text */
-        white-space: nowrap; /* Prevent the text from wrapping to the next line */
-        overflow: hidden; /* Ensure no overflow */
-        text-overflow: ellipsis; /* Add ellipsis if the text overflows */
-    }
+      position: absolute; /* Position it on top of the painting */
+      top: -4%; /* Move the text down to ensure it's fully visible */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Center the text horizontally */
+      z-index: 10; /* Ensure it appears above the images */
+      font-size: 25px; /* Adjust the font size */
+      color: #ff8425; /* Adjust the text color */
+      text-align: center; /* Center the text */
+      font-family: 'Gaegu', cursive; /* Use the specified font */
+      white-space: nowrap; /* Prevent the text from wrapping to the next line */
+      padding: 5px 10px; /* Add padding around the text */
+  }
 
     .poster {
         display: flex; /* Center the content */
@@ -476,7 +474,7 @@ html, body {
       }
 
       #popup-painting-2 {
-        top: 1800px; /* Moved down */
+        top: 2200px; /* Moved down */
         height: auto;
         width: 60%; /* Adjust width */
         left: 30%; /* Center horizontally */
@@ -513,12 +511,14 @@ html, body {
         justify-content: center;
         gap: 15px;
         width: 100%;
+        
     }
 
     .gifs-container {
         display: flex !important; /* Override grid */
         flex-direction: column !important; /* Stack vertically */
         align-items: center; /* Center images */
+        padding-bottom: 20px; /* Add space below the horizontal GIFs */
     }
 
     .horizontal-gifs img {
@@ -530,11 +530,16 @@ html, body {
         
         grid-template-columns: 1fr !important; /* One column layout */
         width: 100%; /* Make it full width */
+        overflow: visible; /* Allow the text to overflow above the container */
+        gap: 0; /* Remove the gap between paintings */
+        
+
     }
 
     .painting {
         width: 80%; /* Adjust width for better spacing */
         margin: 0 auto; /* Center the paintings */
+        overflow: visible; /* Allow the text to overflow above the container */
     }
     .hamburger {
       display: block; /* Show hamburger on mobile */
