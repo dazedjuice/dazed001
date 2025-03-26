@@ -159,6 +159,7 @@ const popup = document.querySelector('.popup.window.hidden');
 const poster = document.querySelector('.poster');
 const closeArea = popup.querySelector('.close-area'); // Close button area
 
+
 // Add click event listener to the poster
 poster.addEventListener('click', () => {
   popup.style.display = 'block';
@@ -168,4 +169,56 @@ closeArea.addEventListener('click', () => {
   popup.style.display = 'none';
   popup.classList.add('hidden');
 });
+
+
+
+  // Get all paintings
+  const paintings = document.querySelectorAll('.painting');
+
+  // Add click event listener to each painting
+  paintings.forEach((painting) => {
+    painting.addEventListener('click', () => {
+      // Get the popup ID from the data attribute
+      const popupId = painting.getAttribute('data-popup-id');
+      const popup = document.getElementById(popupId);
+
+      // Get the static and hover images
+      const staticImg = painting.querySelector('.static-img');
+      const hoverImg = painting.querySelector('.hover-img');
+
+      // Swap the static image with the hover image (GIF)
+      if (staticImg && hoverImg) {
+        staticImg.style.display = 'none'; // Hide the static image
+        hoverImg.style.display = 'block'; // Show the GIF
+      }
+
+      // Show the popup
+      if (popup) {
+        popup.style.display = 'block';
+        popup.classList.remove('hidden');
+      }
+    });
+  });
+
+  // Add click event listener to all close buttons
+  const closeAreas = document.querySelectorAll('.popup .close-area');
+  closeAreas.forEach((closeArea) => {
+    closeArea.addEventListener('click', () => {
+      const popup = closeArea.closest('.popup');
+      if (popup) {
+        popup.style.display = 'none'; // Hide the popup
+        popup.classList.add('hidden'); // Add the hidden class
+
+        // Reset all paintings to show the static image
+        paintings.forEach((painting) => {
+          const staticImg = painting.querySelector('.static-img');
+          const hoverImg = painting.querySelector('.hover-img');
+          if (staticImg && hoverImg) {
+            staticImg.style.display = 'block'; // Show the static image
+            hoverImg.style.display = 'none'; // Hide the GIF
+          }
+        });
+      }
+    });
+  });
 });

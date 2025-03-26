@@ -226,26 +226,15 @@ html, body {
     left: 0;
 }
 
-/* Hover image settings */
-.painting .hover-img {
-    opacity: 0; /* Initially hidden */
-    
-}
-
-/* Show hover image on hover */
-.painting:hover .hover-img {
-    opacity: 1;
-}
-
-/* Hide static image on hover */
-.painting:hover .static-img {
-    opacity: 0;
-}
+.painting .static-img {
+    display: block; /* Show the static image by default */
+  }
+  
+  .painting .hover-img {
+    display: none; /* Hide the GIF by default */
+  }
 
 
-
-
- 
 
  /* Main container for everything */
 .horizontal-gifs {
@@ -297,7 +286,21 @@ html, body {
     background: transparent; /* No background, as it's invisible */
   }
 
+  #popup-painting-1 {
+    top: 1650px; /* Moved down */
+    left: 250px; /* Moved to the left */
+    width: 400px; /* Increased width */
+    height: 200px; /* Increased height */
+    
+  }
 
+  #popup-painting-2 {
+    top: 1650px; /* Moved down */
+    right: 250px; /* Moved to the left */
+    width: 400px; /* Increased width */
+    height: 200px; /* Increased height */
+    
+  }
   
 /* GIFs container (2x2 grid) */
 .gifs-container {
@@ -435,6 +438,21 @@ html, body {
         object-fit: contain; /* Ensure the image fits within the container */
         border-radius: 5px; /* Optional: Add rounded corners */
       }
+
+      #popup-painting-1 {
+        top: auto; /* Moved down */
+        height: auto;
+        width: 60%; /* Adjust width */
+        left: 30%; /* Center horizontally */
+      }
+
+      #popup-painting-2 {
+        top: 2000px; /* Moved down */
+        height: auto;
+        width: 60%; /* Adjust width */
+        left: 30%; /* Center horizontally */
+      }
+
      
       .popup.window {
         max-width: 80%; /* Reduce the width for mobile */
