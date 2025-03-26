@@ -168,6 +168,7 @@ html, body {
     font-size: 30px;
     color: #8400ff;
     animation: blink 1.5s infinite;
+    margin bottom: 10px;
 }
 
   .poster {
@@ -411,6 +412,13 @@ html, body {
         height: auto;
         object-fit: cover;
         
+    }
+    .tap-to-learn {
+        text-align: center;
+        font-size: 30px;
+        color: #8400ff;
+        animation: blink 1.5s infinite;
+        margin: 0px;
     }
 
     .poster {
