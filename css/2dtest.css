@@ -94,136 +94,131 @@ html, body {
   
   /* Overlay Menu Styling */
 .overlay-menu {
-  display: none; /* Hide overlay by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-  z-index: 1000; /* Ensure it is above other elements */
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Prevent scrolling within the overlay */
-  opacity: 0; /* Start fully transparent */
-  transform: scale(0.5); /* Start smaller */
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
-}
-
-.overlay-menu.show {
-  display: flex; /* Show overlay menu when active */
-  opacity: 1; /* Fade in */
-  transform: scale(1); /* Scale to full size */
-}
-
-/* Optional: Add a keyframe animation for more control */
-@keyframes overlay-grow {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.overlay-menu.show {
-  animation: overlay-grow 0.4s ease-out; /* Apply the animation */
-}
-
-.overlay-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center; /* Center the buttons horizontally */
-  justify-content: center; /* Center the buttons vertically */
-  height: 100%; /* Ensure the overlay content takes full height */
-}
-
-.overlay-content a {
-  text-decoration: none;
-  font-size: 24px;
-  width: 120px; /* Adjust the width of the buttons in the overlay */
-  height: 120px; /* Adjust the height of the buttons in the overlay */
-  display: flex; /* Ensure the link is a flex container */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-  outline: none; /* Remove blue outline on tap */
-  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-}
-
-.overlay-content a img {
-  width: 100%; /* Ensure the image covers the link area */
-  height: 100%; /* Ensure the image covers the link area */
-  object-fit: contain; /* Ensure the image fits within the area */
-}
-
-
-  .gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the text and videos */
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.gallery-text {
-    margin-bottom: 20px; /* Spacing between text and videos */
-}
-
-.gif-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(4, auto); /* 4 rows (for 12 videos) */
-  gap: 10px; /* Increase gap to make them look less cramped */
-  justify-content: center; /* Center the grid */
-  align-items: center; /* Center the items */
-  width: 100%;
-  max-width: 1500px; /* Increase max-width to make the gallery larger */
-}
-
-.gif-gallery video {
-  width: 100%; /* Make videos fill their grid cell */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 420px; /* Increase max-width for bigger videos */
-  object-fit: cover; /* Ensure video covers the container area */
-}
-
-
-
-
- 
-  
-  
-  main { 
-
-    flex: 1; /* Takes up remaining space */
-    display: flex;
+    display: none; /* Hide overlay by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    z-index: 1000; /* Ensure it is above other elements */
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    min-height: 0; /* Allow the content to overflow */
-    overflow-y: auto;
-    height: auto;
+    overflow: hidden; /* Prevent scrolling within the overlay */
+    opacity: 0; /* Start fully transparent */
+    transform: scale(0.5); /* Start smaller */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
+  }
+  
+  .overlay-menu.show {
+    display: flex; /* Show overlay menu when active */
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Scale to full size */
+  }
+  
+  /* Optional: Add a keyframe animation for more control */
+  @keyframes overlay-grow {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .overlay-menu.show {
+    animation: overlay-grow 0.4s ease-out; /* Apply the animation */
+  }
+  
+  .overlay-content {
+    display: flex;
     flex-direction: column;
-     
-  }
-
-  .gallery-description {
-    font-size: 30px; /* Adjust size as needed */
-    text-align: center; /* Centers the text */
-    margin-bottom: 10px; /* Adds space below the text */
-    margin-top: 10px; /* Adds space below the text */
-  }
-
-  .gallery-text  {
-    color: rgb(61, 84, 255);
-    font-size: 20px; /* Adjust size as needed */
+    gap: 20px;
+    align-items: center; /* Center the buttons horizontally */
+    justify-content: center; /* Center the buttons vertically */
+    height: 100%; /* Ensure the overlay content takes full height */
   }
   
+  .overlay-content a {
+    text-decoration: none;
+    font-size: 24px;
+    width: 120px; /* Adjust the width of the buttons in the overlay */
+    height: 120px; /* Adjust the height of the buttons in the overlay */
+    display: flex; /* Ensure the link is a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    outline: none; /* Remove blue outline on tap */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+  }
   
+  .overlay-content a img {
+    width: 100%; /* Ensure the image covers the link area */
+    height: 100%; /* Ensure the image covers the link area */
+    object-fit: contain; /* Ensure the image fits within the area */
+  }
+  
+  /* Style the images inside the elements */
+main div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  /* Hover effect for a slight zoom */
+  main div:hover img {
+    transform: scale(1.1); /* Slightly zoom in the image */
+  }
+  
+  /* Expanded state */
+  main div.expanded {
+    grid-column: span 2; /* Make the expanded element span 2 columns */
+    grid-row: span 2; /* Make the expanded element span 2 rows */
+    z-index: 1000; /* Bring the expanded element to the front */
+    position: fixed; /* Make it fixed to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    width: 80%; /* Expand to 80% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80vh; /* Ensure it doesn't exceed the viewport height */
+  }
+  
+  /* Expanded image styling */
+  main div.expanded img {
+    transform: scale(1); /* Reset zoom */
+    object-fit: contain; /* Ensure the image fits within the expanded container */
+  }
+
+ /* Style the main container */
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+}
+
+/* Style each element (painting, sketchbook, watercolor, comic) */
+main div {
+  position: relative;
+  width: 100%; /* Let the grid control the width */
+  max-width: 300px; /* Optional: Limit the maximum width */
+  aspect-ratio: auto; /* Maintain the natural aspect ratio of the content */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  cursor: pointer; /* Indicate it's clickable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Remove rounded corners */
+main div {
+  border-radius: 0; /* No rounded corners */
+}
+
+
   
 /* Hide the scrollbar for Webkit browsers (Chrome, Safari, Edge, Opera) */
 ::-webkit-scrollbar {
@@ -265,7 +260,6 @@ body {
  
     
 html, body {
-  
     margin: 0;
     padding: 0;
     display: flex;
@@ -273,37 +267,61 @@ html, body {
     align-items: center;
     min-height: 100vh;
     min-height: -webkit-fill-available; /* Fix for iOS */
-
+    background-color: #f0f0f0;
 }
   #logogif {
     max-height: 50px; /* Adjusted logo size */
     margin-right: auto;
   }
 
-  .gif-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-    grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
-    gap: 5px; /* Slightly larger gap for mobile */
-  }
-
-  .gif-gallery video {
-    max-width: 100%; /* Allow videos to fill the cell */
-  }
-
-  .gif.gallery {
-    grid-template-columns: 1fr 1fr;
-    width: 120%;
-  }
-
-
-  
     header {
-      
       justify-content: space-between; /* Space between logo and buttons */
     }
 
+    .sketchbook {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
     
+    .sketchbook img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        
+    }
+     
+  
+    .horizontal-gifs {
+        display: flex !important;
+        flex-direction: column !important; /* Stack vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
 
+    .gifs-container {
+        display: flex !important; /* Override grid */
+        flex-direction: column !important; /* Stack vertically */
+        align-items: center; /* Center images */
+    }
+
+    .horizontal-gifs img {
+        width: 100% !important;
+        max-width: 400px !important; /* Optional */
+        display: block;
+    }
+    .paintings {
+        grid-template-columns: 1fr !important; /* One column layout */
+        width: 100%; /* Make it full width */
+    }
+
+    .painting {
+        width: 80%; /* Adjust width for better spacing */
+        margin: 0 auto; /* Center the paintings */
+    }
     .hamburger {
       display: block; /* Show hamburger on mobile */
       position: absolute;
@@ -367,4 +385,10 @@ html, body {
       padding-top: 5px; /* Adjust spacing */
   }
   }
-  
+
+  /* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* 1 item per row on smaller screens */
+  }
+}

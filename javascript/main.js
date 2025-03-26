@@ -154,4 +154,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Append the meta tag to the document head
     document.head.appendChild(metaTag);
   }
+  
 });
