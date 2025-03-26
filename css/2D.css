@@ -215,6 +215,19 @@ html, body {
     justify-content: center;
 }
 
+.painting .tap-to-learn {
+    position: absolute; /* Position it on top of the painting */
+    top: -4%; /* Move the text higher (adjust this value as needed) */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    z-index: 10; /* Ensure it appears above the images */
+    font-size: 25px; /* Adjust the font size */
+    color: #ff8425; /* Adjust the text color */
+    text-align: center; /* Center the text */
+    font-family: 'Gaegu', cursive; /* Use the specified font */
+    padding: 5px 10px; /* Add padding around the text */
+}
+
 /* Static and hover images */
 .painting img {
     width: 100%;
@@ -424,6 +437,22 @@ html, body {
         margin: 0px;
     }
 
+    .painting .tap-to-learn {
+        position: absolute; /* Position it on top of the painting */
+        top: -4%; /* Move the text higher (adjust this value as needed) */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center the text horizontally */
+        z-index: 10; /* Ensure it appears above the images */
+        font-size: 25px; /* Adjust the font size */
+        color: #ff8425; /* Adjust the text color */
+        text-align: center; /* Center the text */
+        font-family: 'Gaegu', cursive; /* Use the specified font */
+        padding: 5px 10px; /* Add padding around the text */
+        white-space: nowrap; /* Prevent the text from wrapping to the next line */
+        overflow: hidden; /* Ensure no overflow */
+        text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+    }
+
     .poster {
         display: flex; /* Center the content */
         justify-content: center; /* Horizontally center the image */
@@ -447,7 +476,7 @@ html, body {
       }
 
       #popup-painting-2 {
-        top: 1200px; /* Moved down */
+        top: 1000px; /* Moved down */
         height: auto;
         width: 60%; /* Adjust width */
         left: 30%; /* Center horizontally */
@@ -498,6 +527,7 @@ html, body {
         display: block;
     }
     .paintings {
+        
         grid-template-columns: 1fr !important; /* One column layout */
         width: 100%; /* Make it full width */
     }
