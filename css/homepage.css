@@ -132,13 +132,29 @@ main {
   overflow: hidden; /* Prevent scrolling within the overlay */
   opacity: 0; /* Start fully transparent */
   transform: scale(0.5); /* Start smaller */
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
 }
 
 .overlay-menu.show {
   display: flex; /* Show overlay menu when active */
   opacity: 1; /* Fade in */
   transform: scale(1); /* Scale to full size */
+}
+
+/* Optional: Add a keyframe animation for more control */
+@keyframes overlay-grow {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.overlay-menu.show {
+  animation: overlay-grow 0.4s ease-out; /* Apply the animation */
 }
 
 .overlay-content {

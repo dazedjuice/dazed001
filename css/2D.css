@@ -93,7 +93,7 @@ html, body {
 
   
   /* Overlay Menu Styling */
-  .overlay-menu {
+.overlay-menu {
     display: none; /* Hide overlay by default */
     position: fixed;
     top: 0;
@@ -105,15 +105,31 @@ html, body {
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Prevent scrolling within the overlay */
-    opacity: 0; /* Start hidden */
-    transform: scale(0.8); /* Start smaller */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for overlay */
+    opacity: 0; /* Start fully transparent */
+    transform: scale(0.5); /* Start smaller */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
   }
   
   .overlay-menu.show {
     display: flex; /* Show overlay menu when active */
     opacity: 1; /* Fade in */
     transform: scale(1); /* Scale to full size */
+  }
+  
+  /* Optional: Add a keyframe animation for more control */
+  @keyframes overlay-grow {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .overlay-menu.show {
+    animation: overlay-grow 0.4s ease-out; /* Apply the animation */
   }
   
   .overlay-content {
@@ -126,7 +142,6 @@ html, body {
   }
   
   .overlay-content a {
-    color: black; /* Change text color to black */
     text-decoration: none;
     font-size: 24px;
     width: 120px; /* Adjust the width of the buttons in the overlay */
@@ -143,6 +158,7 @@ html, body {
     height: 100%; /* Ensure the image covers the link area */
     object-fit: contain; /* Ensure the image fits within the area */
   }
+  
 
  
 

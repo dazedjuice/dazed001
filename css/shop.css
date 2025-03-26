@@ -119,57 +119,73 @@ html, body {
     padding: 20px;
   }
   
-  /* Overlay Menu Styling */
-  .overlay-menu {
-    display: none; /* Hide overlay by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    z-index: 1000; /* Ensure it is above other elements */
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Prevent scrolling within the overlay */
-    opacity: 0; /* Start hidden */
-    transform: scale(0.8); /* Start smaller */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for overlay */
+ /* Overlay Menu Styling */
+.overlay-menu {
+  display: none; /* Hide overlay by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  z-index: 1000; /* Ensure it is above other elements */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling within the overlay */
+  opacity: 0; /* Start fully transparent */
+  transform: scale(0.5); /* Start smaller */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
+}
+
+.overlay-menu.show {
+  display: flex; /* Show overlay menu when active */
+  opacity: 1; /* Fade in */
+  transform: scale(1); /* Scale to full size */
+}
+
+/* Optional: Add a keyframe animation for more control */
+@keyframes overlay-grow {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  
-  .overlay-menu.show {
-    display: flex; /* Show overlay menu when active */
-    opacity: 1; /* Fade in */
-    transform: scale(1); /* Scale to full size */
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .overlay-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Center the buttons horizontally */
-    justify-content: center; /* Center the buttons vertically */
-    height: 100%; /* Ensure the overlay content takes full height */
-  }
-  
-  .overlay-content a {
-    color: black; /* Change text color to black */
-    text-decoration: none;
-    font-size: 24px;
-    width: 120px; /* Adjust the width of the buttons in the overlay */
-    height: 120px; /* Adjust the height of the buttons in the overlay */
-    display: flex; /* Ensure the link is a flex container */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
-  
-  .overlay-content a img {
-    width: 100%; /* Ensure the image covers the link area */
-    height: 100%; /* Ensure the image covers the link area */
-    object-fit: contain; /* Ensure the image fits within the area */
-  }
+}
+
+.overlay-menu.show {
+  animation: overlay-grow 0.4s ease-out; /* Apply the animation */
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center the buttons horizontally */
+  justify-content: center; /* Center the buttons vertically */
+  height: 100%; /* Ensure the overlay content takes full height */
+}
+
+.overlay-content a {
+  text-decoration: none;
+  font-size: 24px;
+  width: 120px; /* Adjust the width of the buttons in the overlay */
+  height: 120px; /* Adjust the height of the buttons in the overlay */
+  display: flex; /* Ensure the link is a flex container */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  outline: none; /* Remove blue outline on tap */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+}
+
+.overlay-content a img {
+  width: 100%; /* Ensure the image covers the link area */
+  height: 100%; /* Ensure the image covers the link area */
+  object-fit: contain; /* Ensure the image fits within the area */
+}
+
   
   /* Media Queries for Mobile Devices */
   @media (max-width: 768px) {
