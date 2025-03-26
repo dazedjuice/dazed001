@@ -1,394 +1,44 @@
-/* General styles */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    min-height: 100vh; /* Allow body to grow */
-    background-color: aliceblue;
-    background-image: url("../images/background.png");
-    background-size: cover; /* Ensure the background image covers the entire area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Prevent vertical scrolling */
-    padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
-    padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
-    
-  }
-  
-  /* Header styling */
-  header {
-    width: 100%;
-    background-color: transparent;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between; /* Space between logo and buttons */
-    align-items: center;
-    position: relative;
-    height: 140px;
-    box-sizing: border-box; /* Include padding in width and height calculations */
-  }
-  
-  #logogif {
-    max-height: 70px; /* Adjusted logo size */
-    margin-right: auto;
-  }
-  
-  .hamburger {
-    display: none; /* Hide hamburger by default */
-    font-size: 30px;
-    cursor: pointer;
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
-  
-  .button-container {
-    display: flex;
-    gap: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .button-container a {
-    display: inline-block;
-    width: 100px; /* Adjusted width to fit images better */
-    height: 100px; /* Adjusted height to fit images better */
-    padding: 0; /* Remove any padding */
-    margin: 0; /* Remove any margin */
-    position: relative; /* Position relative to contain hover images */
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
-  
-  .button-container a img {
-    width: 100%; /* Ensure the image covers the link area */
-    height: 100%; /* Ensure the image covers the link area */
-    object-fit: contain; /* Ensure the image fits within the area */
-  }
-  
-  .button-container a .hover-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0; /* Hide hover image by default */
-  }
-  
-  .button-container a:hover .hover-img {
-    opacity: 1; /* Show hover image on hover */
-  }
-  
-  .button-container a:hover img:not(.hover-img) {
-    opacity: 0; /* Hide original image on hover */
-  }
-  
- 
-  
+/* General body styles */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; /* Allow the body to grow with content */
+  overflow-y: scroll; /* Enable vertical scrolling */
+}
 
-
-  
-  /* Overlay Menu Styling */
-.overlay-menu {
-    display: none; /* Hide overlay by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    z-index: 1000; /* Ensure it is above other elements */
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Prevent scrolling within the overlay */
-    opacity: 0; /* Start fully transparent */
-    transform: scale(0.5); /* Start smaller */
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
-  }
-  
-  .overlay-menu.show {
-    display: flex; /* Show overlay menu when active */
-    opacity: 1; /* Fade in */
-    transform: scale(1); /* Scale to full size */
-  }
-  
-  /* Optional: Add a keyframe animation for more control */
-  @keyframes overlay-grow {
-    0% {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  .overlay-menu.show {
-    animation: overlay-grow 0.4s ease-out; /* Apply the animation */
-  }
-  
-  .overlay-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Center the buttons horizontally */
-    justify-content: center; /* Center the buttons vertically */
-    height: 100%; /* Ensure the overlay content takes full height */
-  }
-  
-  .overlay-content a {
-    text-decoration: none;
-    font-size: 24px;
-    width: 120px; /* Adjust the width of the buttons in the overlay */
-    height: 120px; /* Adjust the height of the buttons in the overlay */
-    display: flex; /* Ensure the link is a flex container */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
-  
-  .overlay-content a img {
-    width: 100%; /* Ensure the image covers the link area */
-    height: 100%; /* Ensure the image covers the link area */
-    object-fit: contain; /* Ensure the image fits within the area */
-  }
-  
-  /* Style the images inside the elements */
-main div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-  }
-  
-  /* Hover effect for a slight zoom */
-  main div:hover img {
-    transform: scale(1.1); /* Slightly zoom in the image */
-  }
-  
-  /* Expanded state */
-  main div.expanded {
-    grid-column: span 2; /* Make the expanded element span 2 columns */
-    grid-row: span 2; /* Make the expanded element span 2 rows */
-    z-index: 1000; /* Bring the expanded element to the front */
-    position: fixed; /* Make it fixed to the viewport */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for centering */
-    width: 80%; /* Expand to 80% of the viewport width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 80vh; /* Ensure it doesn't exceed the viewport height */
-  }
-  
-  /* Expanded image styling */
-  main div.expanded img {
-    transform: scale(1); /* Reset zoom */
-    object-fit: contain; /* Ensure the image fits within the expanded container */
-  }
-
- /* Style the main container */
-main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 20px; /* Space between items */
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+/* Content styles */
+.content {
   padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-/* Style each element (painting, sketchbook, watercolor, comic) */
-main div {
-  position: relative;
-  width: 100%; /* Let the grid control the width */
-  max-width: 300px; /* Optional: Limit the maximum width */
-  aspect-ratio: auto; /* Maintain the natural aspect ratio of the content */
-  overflow: hidden; /* Ensure content doesn't overflow */
-  cursor: pointer; /* Indicate it's clickable */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+/* Popup styles */
+.popup.window {
+  position: fixed; /* Keeps the popup fixed in place */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+  max-width: 400px; /* Set the maximum width of the popup */
+  max-height: 300px; /* Set the maximum height of the popup */
+  width: 90%; /* Make it responsive by using a percentage width */
+  overflow: auto; /* Allow scrolling inside the popup if content overflows */
 }
 
-/* Remove rounded corners */
-main div {
-  border-radius: 0; /* No rounded corners */
-}
-
-
-  
-/* Hide the scrollbar for Webkit browsers (Chrome, Safari, Edge, Opera) */
-::-webkit-scrollbar {
+/* Hidden class to hide the popup */
+.hidden {
   display: none;
 }
 
-/* Hide the scrollbar for Firefox */
-body {
-  scrollbar-width: none; /* Firefox */
-}
-.back-to-top {
-  position: absolute;
+/* Button styles */
+button {
+  position: fixed;
   bottom: 20px;
-  right: 20px;
-  width: 70px;  /* Adjust size as needed */
-  height: auto;
-  cursor: pointer;
-  display: block; /* Initially hidden */
-  transition: opacity 0.3s ease-in-out;
-}
-.back-to-top:hover {
-  opacity: 0.7;
-}
-  /* Footer styling */
-  footer {
-    width: 100%;
-    text-align: center;
-    color: #90ee90;
-    padding: 20px;
-    position: relative; /* Let it flow normally */
-    background: transparent;
-    padding-right: 20px;
-    box-sizing: border-box;
-  }
-
-
-  /* Media Queries for Mobile Devices */
-  @media (max-width: 768px) {
- 
-    
-html, body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* Fix for iOS */
-    background-color: #f0f0f0;
-}
-  #logogif {
-    max-height: 50px; /* Adjusted logo size */
-    margin-right: auto;
-  }
-
-    header {
-      justify-content: space-between; /* Space between logo and buttons */
-    }
-
-    .sketchbook {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-    
-    .sketchbook img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        
-    }
-     
-  
-    .horizontal-gifs {
-        display: flex !important;
-        flex-direction: column !important; /* Stack vertically */
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .gifs-container {
-        display: flex !important; /* Override grid */
-        flex-direction: column !important; /* Stack vertically */
-        align-items: center; /* Center images */
-    }
-
-    .horizontal-gifs img {
-        width: 100% !important;
-        max-width: 400px !important; /* Optional */
-        display: block;
-    }
-    .paintings {
-        grid-template-columns: 1fr !important; /* One column layout */
-        width: 100%; /* Make it full width */
-    }
-
-    .painting {
-        width: 80%; /* Adjust width for better spacing */
-        margin: 0 auto; /* Center the paintings */
-    }
-    .hamburger {
-      display: block; /* Show hamburger on mobile */
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      outline: none; /* Remove blue outline on tap */
-      -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-    }
-  
-    .hamburger img {
-      width: 40px; /* Adjust the width of the hamburger image */
-      height: 40px; /* Adjust the height of the hamburger image */
-    }
-  
-    .button-container {
-      display: none !important; /* Ensure it's completely gone */
-      visibility: hidden;
-    }
-  
-    .overlay-menu {
-      display: none; /* Hide overlay by default */
-    }
-  
-    .overlay-menu.show {
-      display: flex; /* Show overlay menu when active */
-      opacity: 1; /* Fade in */
-      transform: scale(1); /* Scale to full size */
-    }
-  
-    .overlay-content {
-      justify-content: center; /* Center the buttons vertically */
-      height: 100%; /* Ensure the overlay content takes full height */
-    }
-  
-    .overlay-content a {
-      width: 120px; /* Adjust the width of the buttons in the overlay */
-      height: 120px; /* Adjust the height of the buttons in the overlay */
-      display: flex; /* Ensure the link is a flex container */
-      justify-content: center; /* Center the image horizontally */
-      align-items: center; /* Center the image vertically */
-      outline: none; /* Remove blue outline on tap */
-      -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-    }
-  
-    .overlay-content a img {
-      width: 100%; /* Ensure the image covers the link area */
-      height: 100%; /* Ensure the image covers the link area */
-      object-fit: contain; /* Ensure the image fits within the area */
-    }
-  
-    .button-container a .hover-img,
-    .overlay-content a .hover-img {
-      display: none; /* Hide hover image on mobile */
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* Push content down */
-      align-items: center;
-      min-height: 100vh; /* Ensure it takes full height */
-      padding-top: 5px; /* Adjust spacing */
-  }
-  }
-
-  /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr; /* 1 item per row on smaller screens */
-  }
+  left: 20px;
+  z-index: 1001;
 }

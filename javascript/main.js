@@ -154,5 +154,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Append the meta tag to the document head
     document.head.appendChild(metaTag);
   }
-  
+// Get references to the popup, poster, and close button elements
+const popup = document.querySelector('.popup.window.hidden');
+const poster = document.querySelector('.poster');
+const closeArea = popup.querySelector('.close-area'); // Close button area
+
+// Add click event listener to the poster
+poster.addEventListener('click', () => {
+  popup.style.display = 'block';
+  popup.classList.remove('hidden');
+});
+closeArea.addEventListener('click', () => {
+  popup.style.display = 'none';
+  popup.classList.add('hidden');
+});
 });

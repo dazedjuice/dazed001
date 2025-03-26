@@ -18,11 +18,11 @@
 
   <!-- Google Fonts: Gaegu -->
   <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+
 
   <link rel="manifest" href="./favicon/site.webmanifest">
   <style>
-    .gallery-text {
+    .tap-to-learn {
       font-family: 'Gaegu', cursive;
     }
   </style>
@@ -35,6 +35,9 @@
 
 </head>
 <body>
+
+
+    
   <header id="header">
     <a href="./index.html" class="logo">
       <img src="./images/dazedgif.gif" id="logogif" />
@@ -95,23 +98,30 @@
     </div>
   </div>
 
+
+
+  
   <main>
 
-    
-    <div class="horizontal-gifs">
-        <div class="gallery-text">
-            <h2>Explore My 2D Work</h2>
-            
-        </div>
-        <!-- Text Container -->
-        <div class="text-container">
-            <h2>Music Nostalgia</h2>
-            <p class="image-description"> "Music nostalgia" was for my graduation project at Riga Art and media school.</p>
-            <p class="image-description">For this assignment, we were tasked with creating a 2–3 minute animation, incorporating sound design, and conducting a brief study on our chosen theme.</p>
-            <p class="image-description">I explored how music influences our ability to recall specific moments and people, highlighting its deep connection to memory and emotion.</p>
-            <p class="image-description">Made in Krita, Adobe Photoshop. </p>
-        </div>
-    
+    <!-- Popup placed directly inside the body -->
+  <div class="popup window hidden">
+    <img src="./Gallery/textwindow.png" alt="textwindow">
+    <span class="close-area"></span>
+
+  </div>
+ 
+  <p class="tap-to-learn">Tap to learn more</p>
+
+      <div class="poster">
+        <img src="./Gallery/plakats.png" alt="plakats">
+        
+    </div>
+
+
+
+
+ 
+      
         <!-- GIFs Container -->
         <div class="gifs-container">
             <img src="./Gallery/animation1.gif" alt="GIF 1">
@@ -124,23 +134,14 @@
 
     <div class="paintings">
         <div class="painting-container">
-            <div class="text-container">
-                <h3>Mundane</h3>
-                <p>Painting of a friend made while we were living in Spain.</p>
-                <p>Acrylic, Canvas board, 2023 </p>
-            </div>
+            
             <div class="painting">
                 <img src="./Gallery/painting.png" alt="Painting" class="static-img">
                 <img src="./Gallery/painting.gif" alt="Painting GIF" class="hover-img">
             </div>
         </div>
     
-        <div class="painting-container">
-            <div class="text-container">
-                <h3>Flores de primavera</h3>
-                <p>A painting of spring flowers, made as a gift.</p>
-                <p>Acrylic, Canvas board, 2024 </p>
-            </div>
+       
             <div class="painting">
                 <img src="./Gallery/flowerpainting.png" alt="Flower Painting" class="static-img">
                 <img src="./Gallery/flower.gif" alt="Flower GIF" class="hover-img">
@@ -164,11 +165,13 @@
 
   </main>
 
+
+
   <footer>
     <img src="./images/scrollup.png" id="backToTop" class="back-to-top" alt="Back to Top">
     <p>&copy; i tried 2025</p>
   </footer>
 
-  <script src="./javascript/gallery.js"></script>
+  <script src="./javascript/main.js"></script>
 </body>
 </html>
