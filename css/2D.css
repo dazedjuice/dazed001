@@ -168,7 +168,7 @@ html, body {
     font-size: 30px;
     color: #8400ff;
     animation: blink 1.5s infinite;
-    margin-bottom: 10px;
+
 }
 
   .poster {
@@ -442,7 +442,7 @@ html, body {
         width: 80%; /* Ensure it fits within the screen */
         padding: 10px; /* Reduce padding */
         border-radius: 5px; /* Optional: Adjust border radius */
-        top: 27%; /* Move it down */
+        top: 35%; /* Move it down */
         left: 40%; /* Move it to the left */
         transform: translate(-40%, -50%); /* Adjust centering based on new position */
       }
