@@ -474,7 +474,8 @@ html, body {
       }
 
       #popup-painting-2 {
-        top: 2200px; /* Moved down */
+        position: absolute;
+        top: auto; /* Moved down */
         height: auto;
         width: 60%; /* Adjust width */
         left: 30%; /* Center horizontally */
