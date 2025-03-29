@@ -369,7 +369,7 @@ html, body {
   
 .video-wrapper .tap-to-learn {
   position: absolute; /* Position it on top of the painting */
-  top: -12%; /* Move the text down to ensure it's fully visible */
+  top: auto; /* Move the text down to ensure it's fully visible */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center the text horizontally */
   z-index: 10; /* Ensure it appears above the images */
