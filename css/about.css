@@ -256,13 +256,12 @@ footer {
     display: none; /* Hide hover image on mobile */
   }
   .main{
-   
+    height: auto;
     position: relative;
     padding: 20px; /* Add padding inside main */
-   
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
     min-height: 100vh; /* Ensure content is within viewport */
-    overflow: hidden; /* Prevent scrolling within the main container */
-    max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
 
   }
 
