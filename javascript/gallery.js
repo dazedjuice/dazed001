@@ -11,7 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.overflow = overlayMenu.classList.contains('show') ? 'hidden' : 'auto'; // Toggle scrolling based on overlay state
       });
     }
-  
+    window.addEventListener('load', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      loadingScreen.style.opacity = '0'; // Fade out
+      setTimeout(() => {
+          loadingScreen.style.display = 'none'; // Hide after fade-out
+      }, 500); // Match the transition duration
+  });
+
     // Hide overlay menu when clicking on the white part
     overlayMenu.addEventListener('click', (event) => {
       if (!overlayContent.contains(event.target)) {
@@ -40,26 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300); // Adjust the delay as needed
       });
     });
-  
-    // Functionality specific to the contact page
-    const emailLink = document.querySelector('.note.email');
-    const instagramLink = document.querySelector('.note.instagram');
-    const tiktokLink = document.querySelector('.note.tiktok');
-  
-    if (emailLink && instagramLink && tiktokLink) {
-      // Add any specific event listeners or functionality for the contact page
-      emailLink.addEventListener('click', function() {
-        console.log('Email link clicked');
-      });
-  
-      instagramLink.addEventListener('click', function() {
-        console.log('Instagram link clicked');
-      });
-  
-      tiktokLink.addEventListener('click', function() {
-        console.log('TikTok link clicked');
-      });
-    }
+    
     const image = document.querySelector('img#backToTop');
     image.addEventListener('click', () => {
       window.scrollTo({
@@ -68,4 +56,25 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-});
+     // Popup functionality for the bathroom video
+     const bathroomVideo = document.querySelector('[data-popup-id="popup-bathroom"]');
+     const bathroomPopup = document.getElementById('popup-bathroom');
+     const closeArea = bathroomPopup?.querySelector('.close-area'); // Select the close-area span
+ 
+     // Ensure the video, popup, and close-area exist
+     if (bathroomVideo && bathroomPopup && closeArea) {
+         // Show the popup when the video is clicked
+         bathroomVideo.addEventListener('click', () => {
+             bathroomPopup.classList.remove('hidden'); // Show the popup
+             bathroomPopup.style.display = 'block'; // Ensure the popup is visible
+         });
+ 
+         // Hide the popup when the close-area is clicked
+         closeArea.addEventListener('click', () => {
+             bathroomPopup.classList.add('hidden'); // Hide the popup
+             bathroomPopup.style.display = 'none'; // Ensure the popup is hidden
+         });
+     } else {
+         console.error('Bathroom video, popup, or close-area not found.');
+     }
+ });
