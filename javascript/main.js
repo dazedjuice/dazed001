@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+    window.addEventListener('load', function () {
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.opacity = '0'; // Fade out
+        setTimeout(() => {
+            loadingScreen.style.display = 'none'; // Hide after fade-out
+        }, 500); // Match the transition duration
+    });
+
   // Hide overlay menu when clicking on the white part
   overlayMenu.addEventListener('click', (event) => {
     if (!overlayContent.contains(event.target)) {
@@ -245,3 +253,4 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Bathroom video, popup, or close-area not found.');
   }
 });
+

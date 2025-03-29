@@ -17,7 +17,38 @@ html, body {
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
     
   }
-  
+  /* Loading screen styles */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* White background for the loading screen */
+  z-index: 9999; /* Ensure it appears above all other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out; /* Fade-out effect */
+}
+
+/* GIF styles */
+.loading-gif {
+  width: 200px; /* Adjust the size of the GIF */
+  height: auto; /* Maintain aspect ratio */
+}
+.loading-gif {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
   /* Header styling */
   header {
     width: 100%;
@@ -369,7 +400,7 @@ html, body {
   
 .video-wrapper .tap-to-learn {
   position: absolute; /* Position it on top of the painting */
-  top: auto; /* Move the text down to ensure it's fully visible */
+  top: 0%; /* Move the text down to ensure it's fully visible */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center the text horizontally */
   z-index: 10; /* Ensure it appears above the images */

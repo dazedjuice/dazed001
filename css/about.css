@@ -185,9 +185,9 @@ footer {
 @media (max-width: 768px) {
   html, body {
 
-    overflow-x: hidden;
-    overflow-y:hidden;
-    height: 100%; /* Ensure full height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
   }
@@ -256,12 +256,13 @@ footer {
     display: none; /* Hide hover image on mobile */
   }
   .main{
-    height: auto;
+   
     position: relative;
     padding: 20px; /* Add padding inside main */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
+   
     min-height: 100vh; /* Ensure content is within viewport */
+    overflow: hidden; /* Prevent scrolling within the main container */
+    max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
 
   }
 
