@@ -185,9 +185,9 @@ footer {
 @media (max-width: 768px) {
   html, body {
 
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow-x: hidden;
+    overflow-y:hidden;
+    height: 100%; /* Ensure full height */
     padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
     padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
   }

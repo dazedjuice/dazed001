@@ -382,7 +382,7 @@ html, body {
     display: grid; /* Ensure grid layout */
     grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
     grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
-    gap: 10px; /* Add spacing between videos */
+    gap: 5px; /* Add spacing between videos */
     justify-items: center; /* Center videos horizontally */
     align-items: center; /* Center videos vertically */
     width: 100%; /* Ensure the gallery takes full width */
@@ -492,7 +492,7 @@ html, body {
     width: 80%; /* Ensure it fits within the screen */
     padding: 10px; /* Reduce padding */
     border-radius: 5px; /* Optional: Adjust border radius */
-    top: 20%; /* Reset top position */
+    top: 30%; /* Reset top position */
     left: 40%; /* Move it to the left */
     transform: translate(-40%, -50%); /* Adjust centering based on new position */
   }
