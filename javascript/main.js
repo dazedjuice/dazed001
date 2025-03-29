@@ -222,3 +222,26 @@ closeArea.addEventListener('click', () => {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the bathroom video and its popup
+  const bathroomVideo = document.querySelector('[data-popup-id="popup-bathroom"]');
+  const bathroomPopup = document.getElementById('popup-bathroom');
+  const closeArea = bathroomPopup.querySelector('.close-area'); // Select the close-area span
+
+  // Ensure the video, popup, and close-area exist
+  if (bathroomVideo && bathroomPopup && closeArea) {
+      // Show the popup when the video is clicked
+      bathroomVideo.addEventListener('click', () => {
+          bathroomPopup.classList.remove('hidden'); // Show the popup
+          bathroomPopup.style.display = 'block'; // Ensure the popup is visible
+      });
+
+      // Hide the popup when the close-area is clicked
+      closeArea.addEventListener('click', () => {
+          bathroomPopup.classList.add('hidden'); // Hide the popup
+          bathroomPopup.style.display = 'none'; // Ensure the popup is hidden
+      });
+  } else {
+      console.error('Bathroom video, popup, or close-area not found.');
+  }
+});
