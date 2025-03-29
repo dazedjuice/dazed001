@@ -158,6 +158,10 @@ html, body {
     opacity: 1;
   }
 }
+.overlay-menu {
+  z-index: 2000; /* Ensure the overlay is above other elements */
+}
+
 
 .overlay-menu.show {
   animation: overlay-grow 0.4s ease-out; /* Apply the animation */
@@ -290,7 +294,7 @@ html, body {
     border-radius: 10px;
     max-width: 500px;
     max-height: 400px;
-    width: 100%; /* Responsive */
+    width: 80%; /* Responsive */
     margin: 20px auto; /* Adds spacing */
     position: relative; /* Ensure child elements can be positioned absolutely */
 }
@@ -376,7 +380,8 @@ html, body {
 
   .gif-gallery {
     display: grid; /* Ensure grid layout */
-    grid-template-columns: 1fr; /* Single column for videos */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
+    grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
     gap: 10px; /* Add spacing between videos */
     justify-items: center; /* Center videos horizontally */
     align-items: center; /* Center videos vertically */
@@ -393,23 +398,23 @@ html, body {
 }
 
 .gif-gallery video {
-    max-width: 80%; /* Ensure videos are responsive */
+    max-width: 100%; /* Ensure videos are responsive */
     height: auto; /* Maintain aspect ratio */
 }
 
   
 .video-wrapper .tap-to-learn {
   position: absolute; /* Position it on top of the painting */
-  top: -25%; /* Move the text down to ensure it's fully visible */
+  top: -17%; /* Move the text down to ensure it's fully visible */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center the text horizontally */
-  z-index: 10; /* Ensure it appears above the images */
-  font-size: 25px; /* Adjust the font size */
+  font-size: 20px; /* Adjust the font size */
   color: #ff8425; /* Adjust the text color */
   text-align: center; /* Center the text */
-  font-family: 'Gaegu', cursive; /* Use the specified font */
+  font-family: 'Gaegu'; /* Use the specified font */
   white-space: nowrap; /* Prevent the text from wrapping to the next line */
-  padding: 5px 10px; /* Add padding around the text */
+  overflow: visible; /* Allow the text to overflow */
+  
 }
   
     header {
@@ -487,7 +492,7 @@ html, body {
     width: 80%; /* Ensure it fits within the screen */
     padding: 10px; /* Reduce padding */
     border-radius: 5px; /* Optional: Adjust border radius */
-    top: 40%; /* Reset top position */
+    top: 20%; /* Reset top position */
     left: 40%; /* Move it to the left */
     transform: translate(-40%, -50%); /* Adjust centering based on new position */
   }
