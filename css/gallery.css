@@ -1,514 +1,515 @@
 /* General styles */
+/* General styles */
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    min-height: 100vh; /* Allow body to grow */
-    background-color: aliceblue;
-    background-image: url("../images/background.png");
-    background-size: cover; /* Ensure the background image covers the entire area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Prevent vertical scrolling */
-    padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
-    padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
-    
-  }
-  /* Loading screen styles */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white; /* White background for the loading screen */
-  z-index: 9999; /* Ensure it appears above all other elements */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh; /* Allow body to grow */
+  background-color: aliceblue;
+  background-image: url("../images/background.png");
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease-out; /* Fade-out effect */
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Prevent vertical scrolling */
+  padding-top: env(safe-area-inset-top); /* Account for the safe area inset at the top */
+  padding-bottom: env(safe-area-inset-bottom); /* Account for the safe area inset at the bottom */
+  
+}
+/* Loading screen styles */
+#loading-screen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: white; /* White background for the loading screen */
+z-index: 9999; /* Ensure it appears above all other elements */
+display: flex;
+justify-content: center;
+align-items: center;
+transition: opacity 0.5s ease-out; /* Fade-out effect */
 }
 
 /* GIF styles */
 .loading-gif {
-  width: 200px; /* Adjust the size of the GIF */
-  height: auto; /* Maintain aspect ratio */
+width: 200px; /* Adjust the size of the GIF */
+height: auto; /* Maintain aspect ratio */
 }
 .loading-gif {
-  animation: fadeIn 1s ease-in-out;
+animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-  /* Header styling */
-  header {
-    width: 100%;
-    background-color: transparent;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between; /* Space between logo and buttons */
-    align-items: center;
-    position: relative;
-    height: 140px;
-    box-sizing: border-box; /* Include padding in width and height calculations */
-  }
-  
-  #logogif {
-    max-height: 70px; /* Adjusted logo size */
-    margin-right: auto;
-  }
-  
-  .hamburger {
-    display: none; /* Hide hamburger by default */
-    font-size: 30px;
-    cursor: pointer;
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
-  
-  .button-container {
-    display: flex;
-    gap: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .button-container a {
-    display: inline-block;
-    width: 100px; /* Adjusted width to fit images better */
-    height: 100px; /* Adjusted height to fit images better */
-    padding: 0; /* Remove any padding */
-    margin: 0; /* Remove any margin */
-    position: relative; /* Position relative to contain hover images */
-    outline: none; /* Remove blue outline on tap */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-  }
-  
-  .button-container a img {
-    width: 100%; /* Ensure the image covers the link area */
-    height: 100%; /* Ensure the image covers the link area */
-    object-fit: contain; /* Ensure the image fits within the area */
-  }
-  
-  .button-container a .hover-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0; /* Hide hover image by default */
-  }
-  
-  .button-container a:hover .hover-img {
-    opacity: 1; /* Show hover image on hover */
-  }
-  
-  .button-container a:hover img:not(.hover-img) {
-    opacity: 0; /* Hide original image on hover */
-  }
-  
- 
-  
-
-
-  
-  /* Overlay Menu Styling */
-.overlay-menu {
-  display: none; /* Hide overlay by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-  z-index: 1000; /* Ensure it is above other elements */
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Prevent scrolling within the overlay */
-  opacity: 0; /* Start fully transparent */
-  transform: scale(0.5); /* Start smaller */
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
-}
-
-.overlay-menu.show {
-  display: flex; /* Show overlay menu when active */
-  opacity: 1; /* Fade in */
-  transform: scale(1); /* Scale to full size */
-}
-
-/* Optional: Add a keyframe animation for more control */
-@keyframes overlay-grow {
-  0% {
-    transform: scale(0.5);
+from {
     opacity: 0;
-  }
-  100% {
-    transform: scale(1);
+}
+to {
     opacity: 1;
-  }
 }
-.overlay-menu {
-  z-index: 2000; /* Ensure the overlay is above other elements */
 }
-
-
-.overlay-menu.show {
-  animation: overlay-grow 0.4s ease-out; /* Apply the animation */
-}
-
-.overlay-content {
+/* Header styling */
+header {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 30px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center; /* Center the buttons horizontally */
-  justify-content: center; /* Center the buttons vertically */
-  height: 100%; /* Ensure the overlay content takes full height */
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center;
+  position: relative;
+  height: 140px;
+  box-sizing: border-box; /* Include padding in width and height calculations */
 }
 
-.overlay-content a {
-  text-decoration: none;
-  font-size: 24px;
-  width: 120px; /* Adjust the width of the buttons in the overlay */
-  height: 120px; /* Adjust the height of the buttons in the overlay */
-  display: flex; /* Ensure the link is a flex container */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+#logogif {
+  max-height: 70px; /* Adjusted logo size */
+  margin-right: auto;
+}
+
+.hamburger {
+  display: none; /* Hide hamburger by default */
+  font-size: 30px;
+  cursor: pointer;
   outline: none; /* Remove blue outline on tap */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
 }
 
-.overlay-content a img {
+.button-container {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-container a {
+  display: inline-block;
+  width: 100px; /* Adjusted width to fit images better */
+  height: 100px; /* Adjusted height to fit images better */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+  position: relative; /* Position relative to contain hover images */
+  outline: none; /* Remove blue outline on tap */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+}
+
+.button-container a img {
   width: 100%; /* Ensure the image covers the link area */
   height: 100%; /* Ensure the image covers the link area */
   object-fit: contain; /* Ensure the image fits within the area */
 }
 
+.button-container a .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0; /* Hide hover image by default */
+}
 
-  .gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the text and videos */
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
+.button-container a:hover .hover-img {
+  opacity: 1; /* Show hover image on hover */
+}
+
+.button-container a:hover img:not(.hover-img) {
+  opacity: 0; /* Hide original image on hover */
+}
+
+
+
+
+
+
+/* Overlay Menu Styling */
+.overlay-menu {
+display: none; /* Hide overlay by default */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+z-index: 1000; /* Ensure it is above other elements */
+justify-content: center;
+align-items: center;
+overflow: hidden; /* Prevent scrolling within the overlay */
+opacity: 0; /* Start fully transparent */
+transform: scale(0.5); /* Start smaller */
+transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition */
+}
+
+.overlay-menu.show {
+display: flex; /* Show overlay menu when active */
+opacity: 1; /* Fade in */
+transform: scale(1); /* Scale to full size */
+}
+
+/* Optional: Add a keyframe animation for more control */
+@keyframes overlay-grow {
+0% {
+  transform: scale(0.5);
+  opacity: 0;
+}
+100% {
+  transform: scale(1);
+  opacity: 1;
+}
+}
+.overlay-menu {
+z-index: 2000; /* Ensure the overlay is above other elements */
+}
+
+
+.overlay-menu.show {
+animation: overlay-grow 0.4s ease-out; /* Apply the animation */
+}
+
+.overlay-content {
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center; /* Center the buttons horizontally */
+justify-content: center; /* Center the buttons vertically */
+height: 100%; /* Ensure the overlay content takes full height */
+}
+
+.overlay-content a {
+text-decoration: none;
+font-size: 24px;
+width: 120px; /* Adjust the width of the buttons in the overlay */
+height: 120px; /* Adjust the height of the buttons in the overlay */
+display: flex; /* Ensure the link is a flex container */
+justify-content: center; /* Center the image horizontally */
+align-items: center; /* Center the image vertically */
+outline: none; /* Remove blue outline on tap */
+-webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+}
+
+.overlay-content a img {
+width: 100%; /* Ensure the image covers the link area */
+height: 100%; /* Ensure the image covers the link area */
+object-fit: contain; /* Ensure the image fits within the area */
+}
+
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the text and videos */
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .gallery-text {
-    margin-bottom: 20px; /* Spacing between text and videos */
+  margin-bottom: 20px; /* Spacing between text and videos */
 }
 
 .gif-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(4, auto); /* 4 rows (for 12 videos) */
-  gap: 10px; /* Increase gap to make them look less cramped */
-  justify-content: center; /* Center the grid */
-  align-items: center; /* Center the items */
-  width: 100%;
-  max-width: 1500px; /* Increase max-width to make the gallery larger */
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columns */
+grid-template-rows: repeat(4, auto); /* 4 rows (for 12 videos) */
+gap: 30px; /* Increase gap to make them look less cramped */
+justify-content: center; /* Center the grid */
+align-items: center; /* Center the items */
+width: 100%;
+max-width: 1500px; /* Increase max-width to make the gallery larger */
 }
 
 .gif-gallery video {
-  width: 100%; /* Make videos fill their grid cell */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 420px; /* Increase max-width for bigger videos */
-  object-fit: cover; /* Ensure video covers the container area */
+width: 100%; /* Make videos fill their grid cell */
+height: auto; /* Maintain aspect ratio */
+max-width: 420px; /* Increase max-width for bigger videos */
+object-fit: cover; /* Ensure video covers the container area */
 }
 
 
 
 .gallery-container{
-  padding-top: 20px; /* Add 20px of top padding */
+padding-top: 20px; /* Add 20px of top padding */
 }
- 
-  
-  
-  main { 
 
-    flex: 1; /* Takes up remaining space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 0; /* Allow the content to overflow */
-    overflow-y: auto;
-    height: auto;
-    flex-direction: column;
-     
-  }
-    
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
+
+
+main { 
+
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 0; /* Allow the content to overflow */
+  overflow-y: auto;
+  height: auto;
+  flex-direction: column;
+   
+}
+  
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
 }
 .video-wrapper {
-  position: relative; /* Establish a positioning context for the text */
-  display: inline-block; /* Ensure the wrapper fits tightly around the video */
-  width: 100%; /* Match the width of the video */
+position: relative; /* Establish a positioning context for the text */
+display: inline-block; /* Ensure the wrapper fits tightly around the video */
+width: 100%; /* Match the width of the video */
 }
 
 .video-wrapper video {
-  display: block; /* Ensure the video is displayed properly */
-  width: 100%; /* Make the video fill the wrapper */
-  height: auto; /* Maintain the aspect ratio */
+display: block; /* Ensure the video is displayed properly */
+width: 100%; /* Make the video fill the wrapper */
+height: auto; /* Maintain the aspect ratio */
 }
 
 .video-wrapper .tap-to-learn {
-  position: absolute; /* Position the text relative to the wrapper */
-  top: -8%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for perfect centering */
-  color: #e56014; /* Green text color */
-  font-size: 30px; /* Adjust font size as needed */
-  pointer-events: none; /* Ensure the text doesn't block clicks on the video */
-  text-align: center; /* Center the text */
-  animation: blink 1.5s infinite;
-  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+position: absolute; /* Position the text relative to the wrapper */
+top: -8%; /* Center vertically */
+left: 50%; /* Center horizontally */
+transform: translate(-50%, -50%); /* Adjust for perfect centering */
+color: #e56014; /* Green text color */
+font-size: 30px; /* Adjust font size as needed */
+pointer-events: none; /* Ensure the text doesn't block clicks on the video */
+text-align: center; /* Center the text */
+animation: blink 1.5s infinite;
+white-space: nowrap; /* Prevent the text from wrapping to the next line */
 }
- 
-  
-  .popup.hidden {
-      display: none; /* Ensure the popup is hidden when the "hidden" class is applied */
-  }
 
 
-  .popup {
-    position: absolute !important; /* Ensures it scrolls with the page */
-    top: 100px; /* Adjust to position it below the header */
-    left: 20%;
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: 1000;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    max-height: 400px;
-    width: 80%; /* Responsive */
-    margin: 20px auto; /* Adds spacing */
-    position: relative; /* Ensure child elements can be positioned absolutely */
+.popup.hidden {
+    display: none; /* Ensure the popup is hidden when the "hidden" class is applied */
 }
+
+
+.popup {
+  position: absolute !important; /* Ensures it scrolls with the page */
+  top: 100px; /* Adjust to position it below the header */
+  left: 20%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 400px;
+  width: 80%; /* Responsive */
+  margin: 20px auto; /* Adds spacing */
+  position: relative; /* Ensure child elements can be positioned absolutely */
+}
+
+.popup img {
   
-  .popup img {
-    
-    width: 100%; /* Ensure the image scales within the popup */
-    height: auto; /* Ensure the image doesn't exceed the popup height */
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-  }
+  width: 100%; /* Ensure the image scales within the popup */
+  height: auto; /* Ensure the image doesn't exceed the popup height */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
 
-  .popup-content {
-    position: relative; /* Ensure the close button is positioned relative to this container */
-  }
+.popup-content {
+  position: relative; /* Ensure the close button is positioned relative to this container */
+}
 
-  .close-area {
-    position: absolute;
-    top: 0; /* Align with the top of the image */
-    right: 0; /* Align with the right of the image */
-    width: 50px; /* Adjust the size of the clickable area */
-    height: 50px; /* Adjust the size of the clickable area */
-    cursor: pointer; /* Make it clickable */
-    background: transparent; /* No background, as it's invisible */
-  }
+.close-area {
+  position: absolute;
+  top: 0; /* Align with the top of the image */
+  right: 0; /* Align with the right of the image */
+  width: 50px; /* Adjust the size of the clickable area */
+  height: 50px; /* Adjust the size of the clickable area */
+  cursor: pointer; /* Make it clickable */
+  background: transparent; /* No background, as it's invisible */
+}
 
 
 
 /* Hide the scrollbar for Webkit browsers (Chrome, Safari, Edge, Opera) */
 ::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
 /* Hide the scrollbar for Firefox */
 body {
-  scrollbar-width: none; /* Firefox */
+scrollbar-width: none; /* Firefox */
 }
 .back-to-top {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 70px;  /* Adjust size as needed */
-  height: auto;
-  cursor: pointer;
-  display: block; /* Initially hidden */
-  transition: opacity 0.3s ease-in-out;
+position: absolute;
+bottom: 20px;
+right: 20px;
+width: 70px;  /* Adjust size as needed */
+height: auto;
+cursor: pointer;
+display: block; /* Initially hidden */
+transition: opacity 0.3s ease-in-out;
 }
 .back-to-top:hover {
-  opacity: 0.7;
+opacity: 0.7;
 }
-  /* Footer styling */
-  footer {
-    width: 100%;
-    text-align: center;
-    color: #90ee90;
-    padding: 20px;
-    position: relative; /* Let it flow normally */
-    background: transparent;
-    padding-right: 20px;
-    box-sizing: border-box;
-  }
+/* Footer styling */
+footer {
+  width: 100%;
+  text-align: center;
+  color: #90ee90;
+  padding: 20px;
+  position: relative; /* Let it flow normally */
+  background: transparent;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
 
 
-  /* Media Queries for Mobile Devices */
-  @media (max-width: 768px) {
- 
-    
-html, body {
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+
   
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* Fix for iOS */
+html, body {
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* Fix for iOS */
 
 }
-  #logogif {
-    max-height: 50px; /* Adjusted logo size */
-    margin-right: auto;
-  }
+#logogif {
+  max-height: 50px; /* Adjusted logo size */
+  margin-right: auto;
+}
 
-  .gif-gallery {
-    display: grid; /* Ensure grid layout */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
-    grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
-    gap: 5px; /* Add spacing between videos */
-    justify-items: center; /* Center videos horizontally */
-    align-items: center; /* Center videos vertically */
-    width: 100%; /* Ensure the gallery takes full width */
+.gif-gallery {
+  display: grid; /* Ensure grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
+  grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
+  gap: 5px; /* Add spacing between videos */
+  justify-items: center; /* Center videos horizontally */
+  align-items: center; /* Center videos vertically */
+  width: 100%; /* Ensure the gallery takes full width */
 }
 
 .video-wrapper {
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  width: 100%; /* Ensure it takes full width */
-  margin: 0 auto; /* Center the wrapper itself */
-  text-align: center; /* Center-align text inside the wrapper */
+display: flex; /* Use flexbox for centering */
+justify-content: center; /* Center content horizontally */
+align-items: center; /* Center content vertically */
+width: 100%; /* Ensure it takes full width */
+margin: 0 auto; /* Center the wrapper itself */
+text-align: center; /* Center-align text inside the wrapper */
 }
 
 .gif-gallery video {
-    max-width: 100%; /* Ensure videos are responsive */
-    height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure videos are responsive */
+  height: auto; /* Maintain aspect ratio */
 }
 
-  
+
 .video-wrapper .tap-to-learn {
-  position: absolute; /* Position it on top of the painting */
-  top: -17%; /* Move the text down to ensure it's fully visible */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center the text horizontally */
-  font-size: 20px; /* Adjust the font size */
-  color: #ff8425; /* Adjust the text color */
-  text-align: center; /* Center the text */
-  font-family: 'Gaegu'; /* Use the specified font */
-  white-space: nowrap; /* Prevent the text from wrapping to the next line */
-  overflow: visible; /* Allow the text to overflow */
-  
+position: absolute; /* Position it on top of the painting */
+top: -17%; /* Move the text down to ensure it's fully visible */
+left: 50%; /* Center horizontally */
+transform: translateX(-50%); /* Center the text horizontally */
+font-size: 20px; /* Adjust the font size */
+color: #ff8425; /* Adjust the text color */
+text-align: center; /* Center the text */
+font-family: 'Gaegu'; /* Use the specified font */
+white-space: nowrap; /* Prevent the text from wrapping to the next line */
+overflow: visible; /* Allow the text to overflow */
+
 }
-  
-    header {
-      
-      justify-content: space-between; /* Space between logo and buttons */
-    }
 
+  header {
     
-
-    .hamburger {
-      display: block; /* Show hamburger on mobile */
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      outline: none; /* Remove blue outline on tap */
-      -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-    }
-  
-    .hamburger img {
-      width: 40px; /* Adjust the width of the hamburger image */
-      height: 40px; /* Adjust the height of the hamburger image */
-    }
-  
-    .button-container {
-      display: none !important; /* Ensure it's completely gone */
-      visibility: hidden;
-    }
-  
-    .overlay-menu {
-      display: none; /* Hide overlay by default */
-    }
-  
-    .overlay-menu.show {
-      display: flex; /* Show overlay menu when active */
-      opacity: 1; /* Fade in */
-      transform: scale(1); /* Scale to full size */
-    }
-  
-    .overlay-content {
-      justify-content: center; /* Center the buttons vertically */
-      height: 100%; /* Ensure the overlay content takes full height */
-    }
-  
-    .overlay-content a {
-      width: 120px; /* Adjust the width of the buttons in the overlay */
-      height: 120px; /* Adjust the height of the buttons in the overlay */
-      display: flex; /* Ensure the link is a flex container */
-      justify-content: center; /* Center the image horizontally */
-      align-items: center; /* Center the image vertically */
-      outline: none; /* Remove blue outline on tap */
-      -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-    }
-  
-    .overlay-content a img {
-      width: 100%; /* Ensure the image covers the link area */
-      height: 100%; /* Ensure the image covers the link area */
-      object-fit: contain; /* Ensure the image fits within the area */
-    }
-  
-    .button-container a .hover-img,
-    .overlay-content a .hover-img {
-      display: none; /* Hide hover image on mobile */
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* Push content down */
-      align-items: center;
-      min-height: 100vh; /* Ensure it takes full height */
-      padding-top: 5px; /* Adjust spacing */
-  }
-  .popup {
-    max-width: 80%; /* Reduce the width for mobile */
-    max-height: 60%; /* Reduce the height for mobile */
-    width: 80%; /* Ensure it fits within the screen */
-    padding: 10px; /* Reduce padding */
-    border-radius: 5px; /* Optional: Adjust border radius */
-    top: 30%; /* Reset top position */
-    left: 40%; /* Move it to the left */
-    transform: translate(-40%, -50%); /* Adjust centering based on new position */
+    justify-content: space-between; /* Space between logo and buttons */
   }
 
-  .popup img {
-    width: 100%;
-    height: auto;
-  }
+  
 
-  .close-area {
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
     position: absolute;
-    top: 10px; /* Adjust the position of the close button */
-    right: 10px; /* Adjust the position of the close button */
-    width: 30px; /* Adjust the size of the clickable area */
-    height: 30px; /* Adjust the size of the clickable area */
-    cursor: pointer; /* Make it clickable */
-    background: transparent; /* No background, as it's invisible */
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none; /* Remove blue outline on tap */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+  }
+
+  .hamburger img {
+    width: 40px; /* Adjust the width of the hamburger image */
+    height: 40px; /* Adjust the height of the hamburger image */
+  }
+
+  .button-container {
+    display: none !important; /* Ensure it's completely gone */
+    visibility: hidden;
+  }
+
+  .overlay-menu {
+    display: none; /* Hide overlay by default */
+  }
+
+  .overlay-menu.show {
+    display: flex; /* Show overlay menu when active */
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Scale to full size */
+  }
+
+  .overlay-content {
+    justify-content: center; /* Center the buttons vertically */
+    height: 100%; /* Ensure the overlay content takes full height */
+  }
+
+  .overlay-content a {
+    width: 120px; /* Adjust the width of the buttons in the overlay */
+    height: 120px; /* Adjust the height of the buttons in the overlay */
+    display: flex; /* Ensure the link is a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    outline: none; /* Remove blue outline on tap */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+  }
+
+  .overlay-content a img {
+    width: 100%; /* Ensure the image covers the link area */
+    height: 100%; /* Ensure the image covers the link area */
+    object-fit: contain; /* Ensure the image fits within the area */
+  }
+
+  .button-container a .hover-img,
+  .overlay-content a .hover-img {
+    display: none; /* Hide hover image on mobile */
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Push content down */
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes full height */
+    padding-top: 5px; /* Adjust spacing */
+}
+.popup {
+  max-width: 80%; /* Reduce the width for mobile */
+  max-height: 60%; /* Reduce the height for mobile */
+  width: 80%; /* Ensure it fits within the screen */
+  padding: 10px; /* Reduce padding */
+  border-radius: 5px; /* Optional: Adjust border radius */
+  top: 30%; /* Reset top position */
+  left: 40%; /* Move it to the left */
+  transform: translate(-40%, -50%); /* Adjust centering based on new position */
+}
+
+.popup img {
+  width: 100%;
+  height: auto;
+}
+
+.close-area {
+  position: absolute;
+  top: 10px; /* Adjust the position of the close button */
+  right: 10px; /* Adjust the position of the close button */
+  width: 30px; /* Adjust the size of the clickable area */
+  height: 30px; /* Adjust the size of the clickable area */
+  cursor: pointer; /* Make it clickable */
+  background: transparent; /* No background, as it's invisible */
 }
 }
