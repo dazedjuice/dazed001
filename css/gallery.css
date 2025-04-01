@@ -381,9 +381,9 @@ html, body {
 
 .gif-gallery {
   display: grid; /* Ensure grid layout */
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
-  grid-template-rows: repeat(6, auto); /* 6 rows (for 12 videos) */
-  gap: 5px; /* Add spacing between videos */
+  grid-template-columns: 1fr; /* Single column for videos */
+  grid-template-rows: auto; /* Automatically adjust rows based on content */
+  gap: 30px; /* Adjust spacing between videos */
   justify-items: center; /* Center videos horizontally */
   align-items: center; /* Center videos vertically */
   width: 100%; /* Ensure the gallery takes full width */
@@ -406,7 +406,7 @@ text-align: center; /* Center-align text inside the wrapper */
 
 .video-wrapper .tap-to-learn {
 position: absolute; /* Position it on top of the painting */
-top: -17%; /* Move the text down to ensure it's fully visible */
+top: -10%; /* Move the text down to ensure it's fully visible */
 left: 50%; /* Center horizontally */
 transform: translateX(-50%); /* Center the text horizontally */
 font-size: 20px; /* Adjust the font size */
