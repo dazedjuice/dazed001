@@ -386,7 +386,7 @@ html, body {
   gap: 30px; /* Adjust spacing between videos */
   justify-items: center; /* Center videos horizontally */
   align-items: center; /* Center videos vertically */
-  width: 100%; /* Ensure the gallery takes full width */
+  width: 80%; /* Ensure the gallery takes full width */
 }
 
 .video-wrapper {
