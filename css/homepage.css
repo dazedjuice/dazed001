@@ -16,7 +16,12 @@ html, body {
   
 }
 
-
+h1 {
+  position: absolute; /* Remove it from the normal document flow */
+  left: -9999px; /* Move it far off-screen */
+  top: -9999px; /* Move it far off-screen */
+  visibility: hidden; /* Ensure it's not visible */
+}
 /* Header styling */
 header {
   width: 100%;
