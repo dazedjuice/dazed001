@@ -180,6 +180,20 @@ footer {
   height: 100%; /* Ensure the image covers the link area */
   object-fit: contain; /* Ensure the image fits within the area */
 }
+ 
+/* Footer styling */
+footer {
+  width: 100%;
+  text-align: center; /* Center the text inside the footer */
+  color: #90ee90;
+  padding: 20px 0; /* Set uniform padding on top and bottom */
+  margin-top: auto; /* Push footer to the bottom */
+  background: transparent; /* Ensure footer has no background */
+  box-sizing: border-box; /* Include padding within the width */
+  padding-left: 20px;  /* Add consistent left padding */
+  padding-right: 20px; /* Add consistent right padding */
+}
+
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
